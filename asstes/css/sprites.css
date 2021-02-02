@@ -1,0 +1,88 @@
+.bg-背景 {
+    width: 1024px; height: 517px;
+    background: url('asstes/img/sprites_ui.png') -10px -10px;
+}
+.bg-单抽按钮 {
+    width: 249px; height: 118px;
+    background: url('asstes/img/sprites_ui.png') -557px -727px;
+}
+.bg-单抽凭证 {
+    width: 90px; height: 68px;
+    background: url('asstes/img/sprites_ui.png') -1279px -498px;
+}
+.bg-顶部提示框_右 {
+    width: 131px; height: 61px;
+    background: url('asstes/img/sprites_ui.png') -1279px -336px;
+}
+.bg-顶部提示框_左 {
+    width: 131px; height: 61px;
+    background: url('asstes/img/sprites_ui.png') -1279px -417px;
+}
+.bg-合成玉图标 {
+    width: 78px; height: 78px;
+    background: url('asstes/img/sprites_ui.png') -1279px -586px;
+}
+.bg-精二详情_向右 {
+    width: 267px; height: 96px;
+    background: url('asstes/img/sprites_ui.png') -10px -1048px;
+}
+.bg-精二详情_向左 {
+    width: 267px; height: 98px;
+    background: url('asstes/img/sprites_ui.png') -582px -896px;
+}
+.bg-前十次寻访 {
+    width: 552px; height: 132px;
+    background: url('asstes/img/sprites_ui.png') -10px -896px;
+}
+.bg-前十次寻访_文字 {
+    width: 411px; height: 108px;
+    background: url('asstes/img/sprites_ui.png') -580px -547px;
+}
+.bg-前十次召唤_背景 {
+    width: 527px; height: 149px;
+    background: url('asstes/img/sprites_ui.png') -10px -727px;
+}
+.bg-十连按钮 {
+    width: 220px; height: 114px;
+    background: url('asstes/img/sprites_ui.png') -1279px -10px;
+}
+.bg-十连凭证 {
+    width: 53px; height: 37px;
+    background: url('asstes/img/sprites_ui.png') -1430px -417px;
+}
+.bg-十连凭证_特殊 {
+    width: 55px; height: 39px;
+    background: url('asstes/img/sprites_ui.png') -1430px -336px;
+}
+.bg-数据契约按钮_右 {
+    width: 220px; height: 76px;
+    background: url('asstes/img/sprites_ui.png') -1279px -144px;
+}
+.bg-数据契约按钮_左 {
+    width: 220px; height: 76px;
+    background: url('asstes/img/sprites_ui.png') -1279px -240px;
+}
+.bg-数据契约数量框 {
+    width: 89px; height: 24px;
+    background: url('asstes/img/sprites_ui.png') -1389px -498px;
+}
+.bg-小人展示框 {
+    width: 205px; height: 225px;
+    background: url('asstes/img/sprites_ui.png') -1054px -10px;
+}
+.bg-寻访详情框 {
+    width: 550px; height: 160px;
+    background: url('asstes/img/sprites_ui.png') -10px -547px;
+}
+.bg-右侧提示框_上 {
+    width: 230px; height: 58px;
+    background: url('asstes/img/sprites_ui.png') -297px -1048px;
+}
+.bg-右侧提示框_下 {
+    width: 226px; height: 53px;
+    background: url('asstes/img/sprites_ui.png') -547px -1048px;
+}
+.bg-钟表图标 {
+    width: 21px; height: 21px;
+    background: url('asstes/img/sprites_ui.png') -1389px -542px;
+}
