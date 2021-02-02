@@ -10,34 +10,34 @@
             ],
             "is_limit": true,
             "rule": {
-                "all": 10000,
+                "all": 1000,
                 "six": {
-                    "all": 200,
+                    "all": 20,
                     "rate_up": [
                         {
-                            "char_id": "001",
-                            "proportion": 70
+                            "char_id": "2014_nian",
+                            "proportion": 7
                         },
                         {
-                            "char_id": "002",
-                            "proportion": 70
+                            "char_id": "225_haak",
+                            "proportion": 7
                         }
                     ]
                 },
                 "five": {
-                    "all": 800,
+                    "all": 80,
                     "rate_up": [
                         {
-                            "char_id": "004",
-                            "proportion": 400
+                            "char_id": "226_hung",
+                            "proportion": 40
                         }
                     ]
                 },
                 "four": {
-                    "all": 5000
+                    "all": 500
                 },
                 "three": {
-                    "all": 4000
+                    "all": 400
                 }
             }
         },
@@ -50,17 +50,17 @@
             ],
             "is_limit": true,
             "rule": {
-                "all": 10000,
+                "all": 1000,
                 "six": {
-                    "all": 200,
+                    "all": 20,
                     "rate_up": [
                         {
                             "char_id": "001",
-                            "proportion": 70
+                            "proportion": 7
                         },
                         {
                             "char_id": "002",
-                            "proportion": 70
+                            "proportion": 7
                         }
                     ],
                     "weight_up": [
@@ -71,19 +71,19 @@
                     ]
                 },
                 "five": {
-                    "all": 800,
+                    "all": 80,
                     "rate_up": [
                         {
                             "char_id": "004",
-                            "proportion": 400
+                            "proportion": 40
                         }
                     ]
                 },
                 "four": {
-                    "all": 5000
+                    "all": 500
                 },
                 "three": {
-                    "all": 4000
+                    "all": 400
                 }
             }
         }

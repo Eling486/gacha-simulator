@@ -18,5 +18,5 @@ function gacha(){
 }
 
 function getRandom(min, max){
-    return parseInt(10*Math.random())
+    return parseInt(Math.random() * (max - min + 1) + min)
 }
