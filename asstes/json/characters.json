@@ -1,0 +1,139 @@
+{
+    "characters": {
+        "star_1": {},
+        "star_2": {
+            "009_12fce": {
+                "name": {
+                    "en": "12F",
+                    "zh": "12F"
+                },
+                "stars": 2,
+                "special": false,
+                "occupation": 7,
+                "organization": 1
+            }
+        },
+        "star_3": {},
+        "star_4": {},
+        "star_5": {
+            "101_sora": {
+                "name": {
+                    "en": "Sora",
+                    "zh": "空"
+                },
+                "stars": 5,
+                "special": false,
+                "occupation": 6,
+                "organization": 3
+            },
+            "102_texas": {
+                "name": {
+                    "en": "Texas",
+                    "zh": "德克萨斯"
+                },
+                "stars": 5,
+                "special": false,
+                "occupation": 1,
+                "organization": 3
+            },
+            "106_franka": {
+                "name": {
+                    "en": "Franka",
+                    "zh": "芙兰卡"
+                },
+                "stars": 5,
+                "special": false,
+                "occupation": 2,
+                "organization": 4
+            }
+        },
+        "star_6": {
+            "010_chen": {
+                "name": {
+                    "en": "Ch'en",
+                    "zh": "陈"
+                },
+                "stars": 6,
+                "special": false,
+                "occupation": 2,
+                "organization": 2
+            },
+            "017_huang": {
+                "name": {
+                    "en": "Blaze",
+                    "zh": "煌"
+                },
+                "stars": 6,
+                "special": false,
+                "occupation": 2,
+                "organization": 1
+            },
+            "103_angel": {
+                "name": {
+                    "en": "Exusiai",
+                    "zh": "能天使"
+                },
+                "stars": 6,
+                "special": false,
+                "occupation": 3,
+                "organization": 3
+            }
+        }
+    },
+    "occupation": {
+        "1": {
+            "name": "先锋",
+            "icon_name": "vanguard"
+        },
+        "2": {
+            "name": "近卫",
+            "icon_name": "guard"
+        },
+        "3": {
+            "name": "狙击",
+            "icon_name": "sniper"
+        },
+        "4": {
+            "name": "重装",
+            "icon_name": "defender"
+        },
+        "5": {
+            "name": "医疗",
+            "icon_name": "medic"
+        },
+        "6": {
+            "name": "辅助",
+            "icon_name": ""
+        },
+        "7": {
+            "name": "术师",
+            "icon_name": "caster"
+        },
+        "8": {
+            "name": "特种",
+            "icon_name": "specialist"
+        }
+    },
+    "organizations": {
+        "1": {
+            "name": "罗德岛",
+            "icon_name": "rhodes_island"
+        },
+        "2": {
+            "name": "龙门近卫局",
+            "icon_name": ""
+        },
+        "3": {
+            "name": "企鹅物流",
+            "icon_name": ""
+        },
+        "4": {
+            "name": "黑钢国际",
+            "icon_name": "bsw"
+        },
+        "5": {
+            "name": "罗德岛",
+            "icon_name": "rhodes_island"
+        }
+    }
+}
