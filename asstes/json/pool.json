@@ -1,0 +1,91 @@
+{
+    "default": "SP_035",
+    "pools": [
+        {
+            "id": "SP_035",
+            "name": "[限定寻访·春节] 地生五金 - 复刻",
+            "open_time": [
+                1611043200,
+                1612209540
+            ],
+            "is_limit": true,
+            "rule": {
+                "all": 10000,
+                "six": {
+                    "all": 200,
+                    "rate_up": [
+                        {
+                            "char_id": "001",
+                            "proportion": 70
+                        },
+                        {
+                            "char_id": "002",
+                            "proportion": 70
+                        }
+                    ]
+                },
+                "five": {
+                    "all": 800,
+                    "rate_up": [
+                        {
+                            "char_id": "004",
+                            "proportion": 400
+                        }
+                    ]
+                },
+                "four": {
+                    "all": 5000
+                },
+                "three": {
+                    "all": 4000
+                }
+            }
+        },
+        {
+            "id": "SP_036",
+            "name": "[限定寻访·春节] 月隐晦明",
+            "open_time": [
+                1612512000,
+                1613678340
+            ],
+            "is_limit": true,
+            "rule": {
+                "all": 10000,
+                "six": {
+                    "all": 200,
+                    "rate_up": [
+                        {
+                            "char_id": "001",
+                            "proportion": 70
+                        },
+                        {
+                            "char_id": "002",
+                            "proportion": 70
+                        }
+                    ],
+                    "weight_up": [
+                        {
+                            "char_id": "003",
+                            "weight": 5
+                        }
+                    ]
+                },
+                "five": {
+                    "all": 800,
+                    "rate_up": [
+                        {
+                            "char_id": "004",
+                            "proportion": 400
+                        }
+                    ]
+                },
+                "four": {
+                    "all": 5000
+                },
+                "three": {
+                    "all": 4000
+                }
+            }
+        }
+    ]
+}
