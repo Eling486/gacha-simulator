@@ -10,7 +10,7 @@
             "occupation": 2,
             "organization": 2
         },
-        "017_huang": {
+        "017_blaze": {
             "name": {
                 "en": "Blaze",
                 "zh": "煌"
@@ -40,7 +40,7 @@
             "occupation": 1,
             "organization": 3
         },
-        "103_angel": {
+        "103_exusiai": {
             "name": {
                 "en": "Exusiai",
                 "zh": "能天使"
@@ -59,63 +59,112 @@
             "special": false,
             "occupation": 2,
             "organization": 4
+        },
+        "107_liskarm": {
+            "name": {
+                "en": "Liskarm",
+                "zh": "雷蛇"
+            },
+            "stars": 5,
+            "limit": false,
+            "occupation": 4,
+            "organization": 4
+        },
+        "108_silence": {
+            "name": {
+                "en": "Silence",
+                "zh": "赫默"
+            },
+            "stars": 5,
+            "limit": false,
+            "occupation": 5,
+            "organization": 5
+        },
+        "109_gitano": {
+            "name": {
+                "en": "Gitano",
+                "zh": "远山"
+            },
+            "stars": 4,
+            "limit": false,
+            "occupation": 7,
+            "organization": 1
+        },
+        "110_deepcolor": {
+            "name": {
+                "en": "Deepcolor",
+                "zh": "深海色"
+            },
+            "stars": 4,
+            "limit": false,
+            "occupation": 6,
+            "organization": 1
+        },
+        "": {
+            "name": {
+                "en": "",
+                "zh": ""
+            },
+            "stars": 0,
+            "limit": false,
+            "occupation": 0,
+            "organization": 0
+        }
+    },
+    "occupation": {
+        "1": {
+            "name": "先锋",
+            "icon_name": "vanguard"
+        },
+        "2": {
+            "name": "近卫",
+            "icon_name": "guard"
+        },
+        "3": {
+            "name": "狙击",
+            "icon_name": "sniper"
+        },
+        "4": {
+            "name": "重装",
+            "icon_name": "defender"
+        },
+        "5": {
+            "name": "医疗",
+            "icon_name": "medic"
+        },
+        "6": {
+            "name": "辅助",
+            "icon_name": ""
+        },
+        "7": {
+            "name": "术师",
+            "icon_name": "caster"
+        },
+        "8": {
+            "name": "特种",
+            "icon_name": "specialist"
+        }
+    },
+    "organizations": {
+        "1": {
+            "name": "罗德岛",
+            "icon_name": "rhodes_island"
+        },
+        "2": {
+            "name": "龙门近卫局",
+            "icon_name": "lgd"
+        },
+        "3": {
+            "name": "企鹅物流",
+            "icon_name": "penguin_logistics"
+        },
+        "4": {
+            "name": "黑钢国际",
+            "icon_name": "bsw"
+        },
+        "5": {
+            "name": "莱茵生命",
+            "icon_name": "rhine"
         }
     }
-},
-"occupation": {
-    "1": {
-        "name": "先锋",
-        "icon_name": "vanguard"
-    },
-    "2": {
-        "name": "近卫",
-        "icon_name": "guard"
-    },
-    "3": {
-        "name": "狙击",
-        "icon_name": "sniper"
-    },
-    "4": {
-        "name": "重装",
-        "icon_name": "defender"
-    },
-    "5": {
-        "name": "医疗",
-        "icon_name": "medic"
-    },
-    "6": {
-        "name": "辅助",
-        "icon_name": ""
-    },
-    "7": {
-        "name": "术师",
-        "icon_name": "caster"
-    },
-    "8": {
-        "name": "特种",
-        "icon_name": "specialist"
-    }
-},
-"organizations": {
-    "1": {
-        "name": "罗德岛",
-        "icon_name": "rhodes_island"
-    },
-    "2": {
-        "name": "龙门近卫局",
-        "icon_name": ""
-    },
-    "3": {
-        "name": "企鹅物流",
-        "icon_name": ""
-    },
-    "4": {
-        "name": "黑钢国际",
-        "icon_name": "bsw"
-    },
-    "5": {
-        "name": "罗德岛",
-        "icon_name": "rhodes_island"
-    }
-}
 }
