@@ -16,3 +16,7 @@ function gachaTenTimes(){
 function gacha(){
 
 }
+
+function getRandom(min, max){
+    return parseInt(10*Math.random())
+}
