@@ -43,10 +43,14 @@ function gachaOnce() {
 }
 
 function gachaTenTimes() {
-    for (var i = 0; i < 10; i++) {
+    var timeStart = Date.now()
+    for (var i = 0; i < 100000000; i++) {
         gacha()
     }
-    console.log(window.six_num)
+    var timeEnd = Date.now()
+    var timeDiff =  timeEnd - timeStart 
+    console.log(window.six_num, window.five_num)
+    console.log('耗时：' + timeDiff)
 }
 
 function gacha() {
@@ -57,11 +61,12 @@ function gacha() {
             break
         }
     }
+
     var all = pool_json.rules.all
     var star_rate = {}
     window.six_rate = pool_json.rules['six'].all
     if (window.last_six_star > 50) {
-        window.six_rate = pool_json.rules['six'].all + (window.last_six_star - 50) * pool_json.rules['six'].all
+        window.six_rate = (window.last_six_star - 49) * pool_json.rules['six'].all
     }
     if (window.gacha_times == 10 && window.six_num == 0 && window.five_num == 0) { // 前十抽保底
         star_rate['six'] = window.six_rate * all
@@ -69,13 +74,11 @@ function gacha() {
     } else {
         for (key in pool_json.rules) {
             if (pool_json.rules[key].all) {
-
                 if (key == 'six') {
                     star_rate[key] = window.six_rate * all
                 } else {
                     star_rate[key] = ((1 - window.six_rate) * pool_json.rules[key].all / (1 - pool_json.rules['six'].all)) * all
                 }
-
             }
         }
     }
@@ -103,7 +106,16 @@ function gacha() {
         window.last_six_star += 1
         window.five_num += 1
     }
-    if (pool_json.rules[result_star].rate_up !== []) {
+    if (result_star == 'four') {
+        window.last_six_star += 1
+        window.four_num += 1
+    }
+    if (result_star == 'three') {
+        window.last_six_star += 1
+        window.three_num += 1
+    }
+
+    if (pool_json.rules[result_star].rate_up) {
         var char_max = {}
         var star_all = 100
         var rate_up_all = 0
@@ -151,8 +163,7 @@ function gacha() {
         var random_char2 = getRandom(1, char_arr.length)
         var result_char = char_arr[random_char2 - 1]
     }
-    console.log(result_star, result_char)
-
+    //console.log(result_star, result_char)
 }
 
 function getRandom(min, max) {
