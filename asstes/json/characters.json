@@ -449,6 +449,126 @@
             "occupation": 6,
             "organization": 0
         },
+        "179_nightingale": {
+            "name": {
+                "en": "Nightingale",
+                "zh": "夜莺"
+            },
+            "stars": 6,
+            "limit": false,
+            "occupation": 5,
+            "organization": 0
+        },
+        "180_eyjafjalla": {
+            "name": {
+                "en": "Eyjafjalla",
+                "zh": "艾雅法拉"
+            },
+            "stars": 6,
+            "limit": false,
+            "occupation": 7,
+            "organization": 0
+        },
+        "181_perfumer": {
+            "name": {
+                "en": "Perfumer",
+                "zh": "调香师"
+            },
+            "stars": 4,
+            "limit": false,
+            "occupation": 5,
+            "organization": 0
+        },
+        "183_earthspirit": {
+            "name": {
+                "en": "Earthspirit",
+                "zh": "地灵"
+            },
+            "stars": 4,
+            "limit": false,
+            "occupation": 6,
+            "organization": 0
+        },
+        "185_mousse": {
+            "name": {
+                "en": "Mousse",
+                "zh": "慕斯"
+            },
+            "stars": 4,
+            "limit": false,
+            "occupation": 2,
+            "organization": 0
+        },
+        "188_hellagur": {
+            "name": {
+                "en": "Hellagur",
+                "zh": "赫拉格"
+            },
+            "stars": 6,
+            "limit": false,
+            "occupation": 2,
+            "organization": 0
+        },
+        "190_vermeil": {
+            "name": {
+                "en": "Vermeil",
+                "zh": "红云"
+            },
+            "stars": 4,
+            "limit": false,
+            "occupation": 3,
+            "organization": 0
+        },
+        "192_plume": {
+            "name": {
+                "en": "Plume",
+                "zh": "翎羽"
+            },
+            "stars": 3,
+            "limit": false,
+            "occupation": 1,
+            "organization": 0
+        },
+        "193_frostleaf": {
+            "name": {
+                "en": "Frostleaf",
+                "zh": "霜叶"
+            },
+            "stars": 4,
+            "limit": false,
+            "occupation": 2,
+            "organization": 0
+        },
+        "195_zhenli": {
+            "name": {
+                "en": "Истина",
+                "zh": "真理"
+            },
+            "stars": 5,
+            "limit": false,
+            "occupation": 6,
+            "organization": 0
+        },
+        "196_gumi": {
+            "name": {
+                "en": "Gumi",
+                "zh": "古米"
+            },
+            "stars": 4,
+            "limit": false,
+            "occupation": 4,
+            "organization": 0
+        },
+        "197_poca": {
+            "name": {
+                "en": "Poca",
+                "zh": "早露"
+            },
+            "stars": 6,
+            "limit": false,
+            "occupation": 3,
+            "organization": 0
+        },
         "": {
             "name": {
                 "en": "",
