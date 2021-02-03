@@ -429,6 +429,26 @@
             "occupation": 2,
             "organization": 0
         },
+        "173_cliffheart": {
+            "name": {
+                "en": "Cliffheart",
+                "zh": "崖心"
+            },
+            "stars": 5,
+            "limit": false,
+            "occupation": 8,
+            "organization": 0
+        },
+        "174_pramanix": {
+            "name": {
+                "en": "Pramanix",
+                "zh": "初雪"
+            },
+            "stars": 5,
+            "limit": false,
+            "occupation": 6,
+            "organization": 0
+        },
         "": {
             "name": {
                 "en": "",
