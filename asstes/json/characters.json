@@ -709,6 +709,76 @@
             "occupation": 3,
             "organization": 0
         },
+        "222_bagpipe": {
+            "name": {
+                "en": "Bagpipe",
+                "zh": "风笛"
+            },
+            "stars": 6,
+            "limit": false,
+            "occupation": 1,
+            "organization": 0
+        },
+        "225_aak": {
+            "name": {
+                "en": "Aak",
+                "zh": "阿"
+            },
+            "stars": 6,
+            "limit": false,
+            "occupation": 8,
+            "organization": 0
+        },
+        "226_hung": {
+            "name": {
+                "en": "Hung",
+                "zh": "吽"
+            },
+            "stars": 5,
+            "limit": false,
+            "occupation": 4,
+            "organization": 0
+        },
+        "235_jessica": {
+            "name": {
+                "en": "Jessica",
+                "zh": "杰西卡"
+            },
+            "stars": 4,
+            "limit": false,
+            "occupation": 3,
+            "organization": 0
+        },
+        "236_rope": {
+            "name": {
+                "en": "Rope",
+                "zh": "暗索"
+            },
+            "stars": 4,
+            "limit": false,
+            "occupation": 8,
+            "organization": 0
+        },
+        "237_gravel": {
+            "name": {
+                "en": "Gravel",
+                "zh": "砾"
+            },
+            "stars": 4,
+            "limit": false,
+            "occupation": 8,
+            "organization": 0
+        },
+        "240_vanila": {
+            "name": {
+                "en": "Vanila",
+                "zh": "香草"
+            },
+            "stars": 3,
+            "limit": false,
+            "occupation": 1,
+            "organization": 0
+        },
         "": {
             "name": {
                 "en": "",
