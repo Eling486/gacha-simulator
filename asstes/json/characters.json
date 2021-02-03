@@ -121,7 +121,7 @@
         },
         "115_lindong": {
             "name": {
-                "en": "Lindong",
+                "en": "Зима",
                 "zh": "凛冬"
             },
             "stars": 5,
@@ -141,7 +141,7 @@
         },
         "118_yuki": {
             "name": {
-                "en": "Yuki",
+                "en": "ShiraYuki",
                 "zh": "白雪"
             },
             "stars": 4,
@@ -232,7 +232,7 @@
         "130_doberman": {
             "name": {
                 "en": "Doberman",
-                "zh": "dubin"
+                "zh": "杜宾"
             },
             "stars": 4,
             "limit": false,
@@ -421,7 +421,7 @@
         },
         "172_silverash": {
             "name": {
-                "en": "Silverash",
+                "en": "SilverAsh",
                 "zh": "银灰"
             },
             "stars": 6,
@@ -551,7 +551,7 @@
         },
         "196_gumi": {
             "name": {
-                "en": "Gumi",
+                "en": "Гум",
                 "zh": "古米"
             },
             "stars": 4,
@@ -781,7 +781,7 @@
         },
         "241_panda": {
             "name": {
-                "en": "Panda",
+                "en": "FEater",
                 "zh": "食铁兽"
             },
             "stars": 5,
@@ -1391,22 +1391,12 @@
         },
         "2014_nian": {
             "name": {
-                "en": "nian",
+                "en": "Nian",
                 "zh": "年"
             },
             "stars": 6,
             "limit": true,
             "occupation": 4,
-            "organization": 0
-        },
-        "": {
-            "name": {
-                "en": "",
-                "zh": ""
-            },
-            "stars": 0,
-            "limit": false,
-            "occupation": 0,
             "organization": 0
         }
     },
