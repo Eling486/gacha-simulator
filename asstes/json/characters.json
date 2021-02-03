@@ -299,6 +299,136 @@
             "occupation": 7,
             "organization": 0
         },
+        "143_specter": {
+            "name": {
+                "en": "Specter",
+                "zh": "幽灵鲨"
+            },
+            "stars": 5,
+            "limit": false,
+            "occupation": 2,
+            "organization": 0
+        },
+        "144_red": {
+            "name": {
+                "en": "Projekt Red",
+                "zh": "红"
+            },
+            "stars": 5,
+            "limit": false,
+            "occupation": 8,
+            "organization": 0
+        },
+        "145_provence": {
+            "name": {
+                "en": "Provence",
+                "zh": "普罗旺斯"
+            },
+            "stars": 5,
+            "limit": false,
+            "occupation": 3,
+            "organization": 0
+        },
+        "147_shining": {
+            "name": {
+                "en": "Shining",
+                "zh": "闪灵"
+            },
+            "stars": 6,
+            "limit": false,
+            "occupation": 5,
+            "organization": 0
+        },
+        "148_nearl": {
+            "name": {
+                "en": "Nearl",
+                "zh": "临光"
+            },
+            "stars": 5,
+            "limit": false,
+            "occupation": 4,
+            "organization": 0
+        },
+        "149_scavenger": {
+            "name": {
+                "en": "Scavenger",
+                "zh": "清道夫"
+            },
+            "stars": 4,
+            "limit": false,
+            "occupation": 1,
+            "organization": 0
+        },
+        "150_cuora": {
+            "name": {
+                "en": "Cuora",
+                "zh": "蛇屠箱"
+            },
+            "stars": 4,
+            "limit": false,
+            "occupation": 4,
+            "organization": 0
+        },
+        "151_myrtle": {
+            "name": {
+                "en": "Myrtle",
+                "zh": "桃金娘"
+            },
+            "stars": 4,
+            "limit": false,
+            "occupation": 1,
+            "organization": 0
+        },
+        "158_firewatch": {
+            "name": {
+                "en": "Firewatch",
+                "zh": "守林人"
+            },
+            "stars": 5,
+            "limit": false,
+            "occupation": 3,
+            "organization": 0
+        },
+        "164_nightmare": {
+            "name": {
+                "en": "Nightmare",
+                "zh": "夜魔"
+            },
+            "stars": 5,
+            "limit": false,
+            "occupation": 7,
+            "organization": 0
+        },
+        "166_skyfire": {
+            "name": {
+                "en": "Skyfire",
+                "zh": "天火"
+            },
+            "stars": 5,
+            "limit": false,
+            "occupation": 7,
+            "organization": 0
+        },
+        "171_warfarin": {
+            "name": {
+                "en": "Warfarin",
+                "zh": "华法琳"
+            },
+            "stars": 5,
+            "limit": false,
+            "occupation": 5,
+            "organization": 0
+        },
+        "172_silverash": {
+            "name": {
+                "en": "Silverash",
+                "zh": "银灰"
+            },
+            "stars": 6,
+            "limit": false,
+            "occupation": 2,
+            "organization": 0
+        },
         "": {
             "name": {
                 "en": "",
