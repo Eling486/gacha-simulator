@@ -99,15 +99,204 @@
             "limit": false,
             "occupation": 6,
             "organization": 1
-        },
-        "": {
+        },"112_siege": {
             "name": {
-                "en": "",
-                "zh": ""
+                "en": "Siege",
+                "zh": "推进之王"
             },
-            "stars": 0,
+            "stars": 6,
             "limit": false,
-            "occupation": 0,
+            "occupation": 1,
+            "organization": 0
+        },
+        "113_cqbw": {
+            "name": {
+                "en": "W",
+                "zh": "W"
+            },
+            "stars": 6,
+            "limit": true,
+            "occupation": 3,
+            "organization": 0
+        },
+        "115_lindong": {
+            "name": {
+                "en": "Lindong",
+                "zh": "凛冬"
+            },
+            "stars": 5,
+            "limit": false,
+            "occupation": 1,
+            "organization": 0
+        },
+        "117_myrrh": {
+            "name": {
+                "en": "Myrrh",
+                "zh": "末药"
+            },
+            "stars": 4,
+            "limit": false,
+            "occupation": 6,
+            "organization": 0
+        },
+        "118——yuki": {
+            "name": {
+                "en": "Yuki",
+                "zh": "白雪"
+            },
+            "stars": 4,
+            "limit": false,
+            "occupation": 3,
+            "organization": 0
+        },
+        "120_hibiscus": {
+            "name": {
+                "en": "Hibiscus",
+                "zh": "芙蓉"
+            },
+            "stars": 3,
+            "limit": false,
+            "occupation": 5,
+            "organization": 0
+        },
+        "121_lava": {
+            "name": {
+                "en": "Lava",
+                "zh": "炎熔"
+            },
+            "stars": 3,
+            "limit": false,
+            "occupation": 7,
+            "organization": 0
+        },
+        "122_beagle": {
+            "name": {
+                "en": "Beagle",
+                "zh": "米格鲁"
+            },
+            "stars": 3,
+            "limit": false,
+            "occupation": 4,
+            "organization": 0
+        },
+        "123_fang": {
+            "name": {
+                "en": "Fang",
+                "zh": "芬"
+            },
+            "stars": 3,
+            "limit": false,
+            "occupation": 1,
+            "organization": 0
+        },
+        "124_kroos": {
+            "name": {
+                "en": "Kroos",
+                "zh": "克洛斯"
+            },
+            "stars": 3,
+            "limit": false,
+            "occupation": 3,
+            "organization": 0
+        },
+        "126_meteor": {
+            "name": {
+                "en": "Meteor",
+                "zh": "流星"
+            },
+            "stars": 4,
+            "limit": false,
+            "occupation": 3,
+            "organization": 0
+        },
+        "128_ptilopsis": {
+            "name": {
+                "en": "Ptilopsis",
+                "zh": "白面鸮"
+            },
+            "stars": 5,
+            "limit": false,
+            "occupation": 5,
+            "organization": 0
+        },
+        "129_bluep": {
+            "name": {
+                "en": "Blue Poison",
+                "zh": "蓝毒"
+            },
+            "stars": 5,
+            "limit": false,
+            "occupation": 3,
+            "organization": 0
+        },
+        "130_doberman": {
+            "name": {
+                "en": "Doberman",
+                "zh": "dubin"
+            },
+            "stars": 4,
+            "limit": false,
+            "occupation": 2,
+            "organization": 0
+        },
+        "133_may": {
+            "name": {
+                "en": "May",
+                "zh": "梅"
+            },
+            "stars": 4,
+            "limit": false,
+            "occupation": 3,
+            "organization": 0
+        },
+        "134_ifrit": {
+            "name": {
+                "en": "Ifrit",
+                "zh": "伊芙利特"
+            },
+            "stars": 6,
+            "limit": false,
+            "occupation": 7,
+            "organization": 5
+        },
+        "136_hoshiguma": {
+            "name": {
+                "en": "Hoshiguma",
+                "zh": "星熊"
+            },
+            "stars": 6,
+            "limit": false,
+            "occupation": 4,
+            "organization": 0
+        },
+        "137_beehunter": {
+            "name": {
+                "en": "Beehunter",
+                "zh": "猎蜂"
+            },
+            "stars": 4,
+            "limit": false,
+            "occupation": 2,
+            "organization": 0
+        },
+        "140_lappland": {
+            "name": {
+                "en": "Lappland",
+                "zh": "拉普兰德"
+            },
+            "stars": 5,
+            "limit": false,
+            "occupation": 2,
+            "organization": 0
+        },
+        "141_haze": {
+            "name": {
+                "en": "Haze",
+                "zh": "夜烟"
+            },
+            "stars": 4,
+            "limit": false,
+            "occupation": 7,
             "organization": 0
         }
     },
