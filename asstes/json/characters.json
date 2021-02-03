@@ -298,6 +298,16 @@
             "limit": false,
             "occupation": 7,
             "organization": 0
+        },
+        "": {
+            "name": {
+                "en": "",
+                "zh": ""
+            },
+            "stars": 0,
+            "limit": false,
+            "occupation": 0,
+            "organization": 0
         }
     },
     "occupation": {
