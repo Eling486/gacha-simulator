@@ -121,7 +121,7 @@
         },
         "115_lindong": {
             "name": {
-                "en": "Lindong",
+                "en": "Зима",
                 "zh": "凛冬"
             },
             "stars": 5,
@@ -141,7 +141,7 @@
         },
         "118_yuki": {
             "name": {
-                "en": "Yuki",
+                "en": "ShiraYuki",
                 "zh": "白雪"
             },
             "stars": 4,
@@ -232,7 +232,7 @@
         "130_doberman": {
             "name": {
                 "en": "Doberman",
-                "zh": "dubin"
+                "zh": "杜宾"
             },
             "stars": 4,
             "limit": false,
@@ -299,14 +299,1104 @@
             "occupation": 7,
             "organization": 0
         },
-        "": {
+        "143_specter": {
             "name": {
-                "en": "",
-                "zh": ""
+                "en": "Specter",
+                "zh": "幽灵鲨"
             },
-            "stars": 0,
+            "stars": 5,
             "limit": false,
-            "occupation": 0,
+            "occupation": 2,
+            "organization": 0
+        },
+        "144_red": {
+            "name": {
+                "en": "Projekt Red",
+                "zh": "红"
+            },
+            "stars": 5,
+            "limit": false,
+            "occupation": 8,
+            "organization": 0
+        },
+        "145_provence": {
+            "name": {
+                "en": "Provence",
+                "zh": "普罗旺斯"
+            },
+            "stars": 5,
+            "limit": false,
+            "occupation": 3,
+            "organization": 0
+        },
+        "147_shining": {
+            "name": {
+                "en": "Shining",
+                "zh": "闪灵"
+            },
+            "stars": 6,
+            "limit": false,
+            "occupation": 5,
+            "organization": 0
+        },
+        "148_nearl": {
+            "name": {
+                "en": "Nearl",
+                "zh": "临光"
+            },
+            "stars": 5,
+            "limit": false,
+            "occupation": 4,
+            "organization": 0
+        },
+        "149_scavenger": {
+            "name": {
+                "en": "Scavenger",
+                "zh": "清道夫"
+            },
+            "stars": 4,
+            "limit": false,
+            "occupation": 1,
+            "organization": 0
+        },
+        "150_cuora": {
+            "name": {
+                "en": "Cuora",
+                "zh": "蛇屠箱"
+            },
+            "stars": 4,
+            "limit": false,
+            "occupation": 4,
+            "organization": 0
+        },
+        "151_myrtle": {
+            "name": {
+                "en": "Myrtle",
+                "zh": "桃金娘"
+            },
+            "stars": 4,
+            "limit": false,
+            "occupation": 1,
+            "organization": 0
+        },
+        "158_firewatch": {
+            "name": {
+                "en": "Firewatch",
+                "zh": "守林人"
+            },
+            "stars": 5,
+            "limit": false,
+            "occupation": 3,
+            "organization": 0
+        },
+        "164_nightmare": {
+            "name": {
+                "en": "Nightmare",
+                "zh": "夜魔"
+            },
+            "stars": 5,
+            "limit": false,
+            "occupation": 7,
+            "organization": 0
+        },
+        "166_skyfire": {
+            "name": {
+                "en": "Skyfire",
+                "zh": "天火"
+            },
+            "stars": 5,
+            "limit": false,
+            "occupation": 7,
+            "organization": 0
+        },
+        "171_warfarin": {
+            "name": {
+                "en": "Warfarin",
+                "zh": "华法琳"
+            },
+            "stars": 5,
+            "limit": false,
+            "occupation": 5,
+            "organization": 0
+        },
+        "172_silverash": {
+            "name": {
+                "en": "SilverAsh",
+                "zh": "银灰"
+            },
+            "stars": 6,
+            "limit": false,
+            "occupation": 2,
+            "organization": 0
+        },
+        "173_cliffheart": {
+            "name": {
+                "en": "Cliffheart",
+                "zh": "崖心"
+            },
+            "stars": 5,
+            "limit": false,
+            "occupation": 8,
+            "organization": 0
+        },
+        "174_pramanix": {
+            "name": {
+                "en": "Pramanix",
+                "zh": "初雪"
+            },
+            "stars": 5,
+            "limit": false,
+            "occupation": 6,
+            "organization": 0
+        },
+        "179_nightingale": {
+            "name": {
+                "en": "Nightingale",
+                "zh": "夜莺"
+            },
+            "stars": 6,
+            "limit": false,
+            "occupation": 5,
+            "organization": 0
+        },
+        "180_eyjafjalla": {
+            "name": {
+                "en": "Eyjafjalla",
+                "zh": "艾雅法拉"
+            },
+            "stars": 6,
+            "limit": false,
+            "occupation": 7,
+            "organization": 0
+        },
+        "181_perfumer": {
+            "name": {
+                "en": "Perfumer",
+                "zh": "调香师"
+            },
+            "stars": 4,
+            "limit": false,
+            "occupation": 5,
+            "organization": 0
+        },
+        "183_earthspirit": {
+            "name": {
+                "en": "Earthspirit",
+                "zh": "地灵"
+            },
+            "stars": 4,
+            "limit": false,
+            "occupation": 6,
+            "organization": 0
+        },
+        "185_mousse": {
+            "name": {
+                "en": "Mousse",
+                "zh": "慕斯"
+            },
+            "stars": 4,
+            "limit": false,
+            "occupation": 2,
+            "organization": 0
+        },
+        "188_hellagur": {
+            "name": {
+                "en": "Hellagur",
+                "zh": "赫拉格"
+            },
+            "stars": 6,
+            "limit": false,
+            "occupation": 2,
+            "organization": 0
+        },
+        "190_vermeil": {
+            "name": {
+                "en": "Vermeil",
+                "zh": "红云"
+            },
+            "stars": 4,
+            "limit": false,
+            "occupation": 3,
+            "organization": 0
+        },
+        "192_plume": {
+            "name": {
+                "en": "Plume",
+                "zh": "翎羽"
+            },
+            "stars": 3,
+            "limit": false,
+            "occupation": 1,
+            "organization": 0
+        },
+        "193_frostleaf": {
+            "name": {
+                "en": "Frostleaf",
+                "zh": "霜叶"
+            },
+            "stars": 4,
+            "limit": false,
+            "occupation": 2,
+            "organization": 0
+        },
+        "195_zhenli": {
+            "name": {
+                "en": "Истина",
+                "zh": "真理"
+            },
+            "stars": 5,
+            "limit": false,
+            "occupation": 6,
+            "organization": 0
+        },
+        "196_gumi": {
+            "name": {
+                "en": "Гум",
+                "zh": "古米"
+            },
+            "stars": 4,
+            "limit": false,
+            "occupation": 4,
+            "organization": 0
+        },
+        "197_poca": {
+            "name": {
+                "en": "Poca",
+                "zh": "早露"
+            },
+            "stars": 6,
+            "limit": false,
+            "occupation": 3,
+            "organization": 0
+        },
+        "199_matterhorn": {
+            "name": {
+                "en": "Matterhorn",
+                "zh": "角峰"
+            },
+            "stars": 4,
+            "limit": false,
+            "occupation": 4,
+            "organization": 0
+        },
+        "201_croissant": {
+            "name": {
+                "en": "Croissant",
+                "zh": "可颂"
+            },
+            "stars": 5,
+            "limit": false,
+            "occupation": 4,
+            "organization": 0
+        },
+        "202_saria": {
+            "name": {
+                "en": "Saria",
+                "zh": "塞雷娅"
+            },
+            "stars": 6,
+            "limit": false,
+            "occupation": 4,
+            "organization": 0
+        },
+        "204_platinum": {
+            "name": {
+                "en": "Platinum",
+                "zh": "白金"
+            },
+            "stars": 5,
+            "limit": false,
+            "occupation": 3,
+            "organization": 0
+        },
+        "208_melantha": {
+            "name": {
+                "en": "Melantha",
+                "zh": "玫兰莎"
+            },
+            "stars": 3,
+            "limit": false,
+            "occupation": 2,
+            "organization": 0
+        },
+        "209_cardigan": {
+            "name": {
+                "en": "Cardigan",
+                "zh": "卡提"
+            },
+            "stars": 3,
+            "limit": false,
+            "occupation": 4,
+            "organization": 0
+        },
+        "210_steward": {
+            "name": {
+                "en": "Steward",
+                "zh": "史都华德"
+            },
+            "stars": 3,
+            "limit": false,
+            "occupation": 7,
+            "organization": 0
+        },
+        "211_adnachiel": {
+            "name": {
+                "en": "Adnachiel",
+                "zh": "安德切尔"
+            },
+            "stars": 3,
+            "limit": false,
+            "occupation": 3,
+            "organization": 0
+        },
+        "212_ansel": {
+            "name": {
+                "en": "Ansel",
+                "zh": "安塞尔"
+            },
+            "stars": 3,
+            "limit": false,
+            "occupation": 5,
+            "organization": 0
+        },
+        "213_mostima": {
+            "name": {
+                "en": "Mostima",
+                "zh": "莫斯提马"
+            },
+            "stars": 6,
+            "limit": false,
+            "occupation": 7,
+            "organization": 0
+        },
+        "214_kafka": {
+            "name": {
+                "en": "Kafka",
+                "zh": "卡夫卡"
+            },
+            "stars": 5,
+            "limit": false,
+            "occupation": 8,
+            "organization": 0
+        },
+        "215_manticore": {
+            "name": {
+                "en": "Manticore",
+                "zh": "狮蝎"
+            },
+            "stars": 5,
+            "limit": false,
+            "occupation": 8,
+            "organization": 0
+        },
+        "218_andreana": {
+            "name": {
+                "en": "Andreana",
+                "zh": "安哲拉"
+            },
+            "stars": 5,
+            "limit": false,
+            "occupation": 3,
+            "organization": 0
+        },
+        "219_meteorite": {
+            "name": {
+                "en": "Meteorite",
+                "zh": "陨星"
+            },
+            "stars": 5,
+            "limit": false,
+            "occupation": 3,
+            "organization": 0
+        },
+        "222_bagpipe": {
+            "name": {
+                "en": "Bagpipe",
+                "zh": "风笛"
+            },
+            "stars": 6,
+            "limit": false,
+            "occupation": 1,
+            "organization": 0
+        },
+        "225_aak": {
+            "name": {
+                "en": "Aak",
+                "zh": "阿"
+            },
+            "stars": 6,
+            "limit": false,
+            "occupation": 8,
+            "organization": 0
+        },
+        "226_hung": {
+            "name": {
+                "en": "Hung",
+                "zh": "吽"
+            },
+            "stars": 5,
+            "limit": false,
+            "occupation": 4,
+            "organization": 0
+        },
+        "235_jessica": {
+            "name": {
+                "en": "Jessica",
+                "zh": "杰西卡"
+            },
+            "stars": 4,
+            "limit": false,
+            "occupation": 3,
+            "organization": 0
+        },
+        "236_rope": {
+            "name": {
+                "en": "Rope",
+                "zh": "暗索"
+            },
+            "stars": 4,
+            "limit": false,
+            "occupation": 8,
+            "organization": 0
+        },
+        "237_gravel": {
+            "name": {
+                "en": "Gravel",
+                "zh": "砾"
+            },
+            "stars": 4,
+            "limit": false,
+            "occupation": 8,
+            "organization": 0
+        },
+        "240_vanila": {
+            "name": {
+                "en": "Vanila",
+                "zh": "香草"
+            },
+            "stars": 3,
+            "limit": false,
+            "occupation": 1,
+            "organization": 0
+        },
+        "241_panda": {
+            "name": {
+                "en": "FEater",
+                "zh": "食铁兽"
+            },
+            "stars": 5,
+            "limit": false,
+            "occupation": 8,
+            "organization": 0
+        },
+        "242_mayer": {
+            "name": {
+                "en": "Mayer",
+                "zh": "梅尔"
+            },
+            "stars": 5,
+            "limit": false,
+            "occupation": 6,
+            "organization": 0
+        },
+        "248_magallan": {
+            "name": {
+                "en": "Magallan",
+                "zh": "麦哲伦"
+            },
+            "stars": 6,
+            "limit": false,
+            "occupation": 6,
+            "organization": 0
+        },
+        "250_phantom": {
+            "name": {
+                "en": "Phantom",
+                "zh": "傀影"
+            },
+            "stars": 6,
+            "limit": false,
+            "occupation": 8,
+            "organization": 0
+        },
+        "253_greyy": {
+            "name": {
+                "en": "Greyy",
+                "zh": "格雷伊"
+            },
+            "stars": 4,
+            "limit": false,
+            "occupation": 7,
+            "organization": 0
+        },
+        "254_shamare": {
+            "name": {
+                "en": "Shamare",
+                "zh": "巫恋"
+            },
+            "stars": 5,
+            "limit": false,
+            "occupation": 6,
+            "organization": 0
+        },
+        "258_podenco": {
+            "name": {
+                "en": "Podenco",
+                "zh": "波登可"
+            },
+            "stars": 4,
+            "limit": false,
+            "occupation": 6,
+            "organization": 0
+        },
+        "261_reed": {
+            "name": {
+                "en": "Reed",
+                "zh": "苇草"
+            },
+            "stars": 5,
+            "limit": false,
+            "occupation": 1,
+            "organization": 0
+        },
+        "263_skadi": {
+            "name": {
+                "en": "Skadi",
+                "zh": "斯卡蒂"
+            },
+            "stars": 6,
+            "limit": false,
+            "occupation": 2,
+            "organization": 0
+        },
+        "264_mountain": {
+            "name": {
+                "en": "Mountain",
+                "zh": "山"
+            },
+            "stars": 6,
+            "limit": false,
+            "occupation": 2,
+            "organization": 0
+        },
+        "271_arene": {
+            "name": {
+                "en": "Arene",
+                "zh": "芳汀"
+            },
+            "stars": 4,
+            "limit": false,
+            "occupation": 4,
+            "organization": 0
+        },
+        "272_jaye": {
+            "name": {
+                "en": "Jaye",
+                "zh": "孑"
+            },
+            "stars": 4,
+            "limit": false,
+            "occupation": 8,
+            "organization": 0
+        },
+        "274_astesia": {
+            "name": {
+                "en": "Astesia",
+                "zh": "星极"
+            },
+            "stars": 5,
+            "limit": false,
+            "occupation": 2,
+            "organization": 0
+        },
+        "277_shaw": {
+            "name": {
+                "en": "Shaw",
+                "zh": "阿消"
+            },
+            "stars": 4,
+            "limit": false,
+            "occupation": 8,
+            "organization": 0
+        },
+        "278_orchid": {
+            "name": {
+                "en": "Orchid",
+                "zh": "梓兰"
+            },
+            "stars": 3,
+            "limit": false,
+            "occupation": 6,
+            "organization": 0
+        },
+        "279_executor": {
+            "name": {
+                "en": "Executor",
+                "zh": "送葬人"
+            },
+            "stars": 5,
+            "limit": false,
+            "occupation": 3,
+            "organization": 0
+        },
+        "281_popukar": {
+            "name": {
+                "en": "Popukar",
+                "zh": "泡普卡"
+            },
+            "stars": 3,
+            "limit": false,
+            "occupation": 2,
+            "organization": 0
+        },
+        "282_catapult": {
+            "name": {
+                "en": "Catapult",
+                "zh": "空爆"
+            },
+            "stars": 3,
+            "limit": false,
+            "occupation": 3,
+            "organization": 0
+        },
+        "283_midnight": {
+            "name": {
+                "en": "Midnight",
+                "zh": "月见夜"
+            },
+            "stars": 3,
+            "limit": false,
+            "occupation": 2,
+            "organization": 0
+        },
+        "284_spot": {
+            "name": {
+                "en": "Spot",
+                "zh": "斑点"
+            },
+            "stars": 3,
+            "limit": false,
+            "occupation": 4,
+            "organization": 0
+        },
+        "289_matoimaru": {
+            "name": {
+                "en": "Matoimaru",
+                "zh": "缠丸"
+            },
+            "stars": 5,
+            "limit": false,
+            "occupation": 2,
+            "organization": 0
+        },
+        "290_vigna": {
+            "name": {
+                "en": "Vigna",
+                "zh": "红豆"
+            },
+            "stars": 4,
+            "limit": false,
+            "occupation": 1,
+            "organization": 0
+        },
+        "291_angelina": {
+            "name": {
+                "en": "Angelina",
+                "zh": "安洁莉娜"
+            },
+            "stars": 6,
+            "limit": false,
+            "occupation": 6,
+            "organization": 0
+        },
+        "293_thorns": {
+            "name": {
+                "en": "Thorns",
+                "zh": "棘刺"
+            },
+            "stars": 6,
+            "limit": false,
+            "occupation": 2,
+            "organization": 0
+        },
+        "298_sussurro": {
+            "name": {
+                "en": "Sussurro",
+                "zh": "苏苏洛"
+            },
+            "stars": 4,
+            "limit": false,
+            "occupation": 5,
+            "organization": 0
+        },
+        "301_cutter": {
+            "name": {
+                "en": "Cutter",
+                "zh": "刻刀"
+            },
+            "stars": 4,
+            "limit": false,
+            "occupation": 2,
+            "organization": 0
+        },
+        "302_ambriel": {
+            "name": {
+                "en": "Ambriel",
+                "zh": "安比尔"
+            },
+            "stars": 4,
+            "limit": false,
+            "occupation": 3,
+            "organization": 0
+        },
+        "306_leizi": {
+            "name": {
+                "en": "Leizi",
+                "zh": "惊蛰"
+            },
+            "stars": 5,
+            "limit": false,
+            "occupation": 7,
+            "organization": 0
+        },
+        "308_swire": {
+            "name": {
+                "en": "Swire",
+                "zh": "诗怀雅"
+            },
+            "stars": 5,
+            "limit": false,
+            "occupation": 2,
+            "organization": 0
+        },
+        "311_mudrock": {
+            "name": {
+                "en": "Mudrock",
+                "zh": "泥岩"
+            },
+            "stars": 6,
+            "limit": false,
+            "occupation": 4,
+            "organization": 0
+        },
+        "326_glaucus": {
+            "name": {
+                "en": "Glaucus",
+                "zh": "格劳克斯"
+            },
+            "stars": 5,
+            "limit": false,
+            "occupation": 6,
+            "organization": 0
+        },
+        "328_click": {
+            "name": {
+                "en": "Click",
+                "zh": "卡达"
+            },
+            "stars": 4,
+            "limit": false,
+            "occupation": 7,
+            "organization": 0
+        },
+        "332_archetto": {
+            "name": {
+                "en": "Archetto",
+                "zh": "空弦"
+            },
+            "stars": 6,
+            "limit": false,
+            "occupation": 3,
+            "organization": 0
+        },
+        "337_utage": {
+            "name": {
+                "en": "Utage",
+                "zh": "宴"
+            },
+            "stars": 4,
+            "limit": false,
+            "occupation": 8,
+            "organization": 0
+        },
+        "338_iris": {
+            "name": {
+                "en": "Iris",
+                "zh": "爱丽丝"
+            },
+            "stars": 5,
+            "limit": false,
+            "occupation": 7,
+            "organization": 0
+        },
+        "340_schwarz": {
+            "name": {
+                "en": "Schwarz",
+                "zh": "黑"
+            },
+            "stars": 6,
+            "limit": false,
+            "occupation": 3,
+            "organization": 0
+        },
+        "343_tsukinogi": {
+            "name": {
+                "en": "Tsukinogi",
+                "zh": "月禾"
+            },
+            "stars": 5,
+            "limit": false,
+            "occupation": 7,
+            "organization": 0
+        },
+        "344_beeswax": {
+            "name": {
+                "en": "Beeswax",
+                "zh": "蜜蜡"
+            },
+            "stars": 5,
+            "limit": false,
+            "occupation": 7,
+            "organization": 0
+        },
+        "346_aosta": {
+            "name": {
+                "en": "Aosta",
+                "zh": "奥斯塔"
+            },
+            "stars": 5,
+            "limit": false,
+            "occupation": 3,
+            "organization": 0
+        },
+        "347_jackie": {
+            "name": {
+                "en": "Jackie",
+                "zh": "杰克"
+            },
+            "stars": 4,
+            "limit": false,
+            "occupation": 2,
+            "organization": 0
+        },
+        "349_chiave": {
+            "name": {
+                "en": "Chiave",
+                "zh": "贾维"
+            },
+            "stars": 5,
+            "limit": false,
+            "occupation": 1,
+            "organization": 0
+        },
+        "350_surtr": {
+            "name": {
+                "en": "Surtr",
+                "zh": "史尔特尔"
+            },
+            "stars": 6,
+            "limit": false,
+            "occupation": 2,
+            "organization": 0
+        },
+        "356_broca": {
+            "name": {
+                "en": "Broca",
+                "zh": "布洛卡"
+            },
+            "stars": 5,
+            "limit": false,
+            "occupation": 2,
+            "organization": 0
+        },
+        "358_suzuran": {
+            "name": {
+                "en": "Suzuran",
+                "zh": "铃兰"
+            },
+            "stars": 6,
+            "limit": false,
+            "occupation": 6,
+            "organization": 0
+        },
+        "365_april": {
+            "name": {
+                "en": "April",
+                "zh": "四月"
+            },
+            "stars": 4,
+            "limit": false,
+            "occupation": 3,
+            "organization": 0
+        },
+        "366_aciddrop": {
+            "name": {
+                "en": "Aciddrop",
+                "zh": "酸糖"
+            },
+            "stars": 4,
+            "limit": false,
+            "occupation": 3,
+            "organization": 0
+        },
+        "367_greythroat": {
+            "name": {
+                "en": "Greythroat",
+                "zh": "灰喉"
+            },
+            "stars": 5,
+            "limit": false,
+            "occupation": 3,
+            "organization": 0
+        },
+        "373_leonhardt": {
+            "name": {
+                "en": "leonhardt",
+                "zh": "莱恩哈特"
+            },
+            "stars": 5,
+            "limit": false,
+            "occupation": 7,
+            "organization": 0
+        },
+        "378_asbestos": {
+            "name": {
+                "en": "Asbestos",
+                "zh": "石棉"
+            },
+            "stars": 5,
+            "limit": false,
+            "occupation": 4,
+            "organization": 0
+        },
+        "379_sesa": {
+            "name": {
+                "en": "Sesa",
+                "zh": "慑砂"
+            },
+            "stars": 5,
+            "limit": false,
+            "occupation": 3,
+            "organization": 0
+        },
+        "381_bubble": {
+            "name": {
+                "en": "Bubble",
+                "zh": "泡泡"
+            },
+            "stars": 4,
+            "limit": false,
+            "occupation": 3,
+            "organization": 0
+        },
+        "391_rosmontis": {
+            "name": {
+                "en": "Rosmontis",
+                "zh": "迷迭香"
+            },
+            "stars": 6,
+            "limit": true,
+            "occupation": 3,
+            "organization": 0
+        },
+        "400_weedy": {
+            "name": {
+                "en": "Weedy",
+                "zh": "温蒂"
+            },
+            "stars": 6,
+            "limit": false,
+            "occupation": 8,
+            "organization": 0
+        },
+        "401_elysium": {
+            "name": {
+                "en": "Elysium",
+                "zh": "极境"
+            },
+            "stars": 5,
+            "limit": false,
+            "occupation": 1,
+            "organization": 0
+        },
+        "415_flint": {
+            "name": {
+                "en": "Flint",
+                "zh": "燧石"
+            },
+            "stars": 5,
+            "limit": false,
+            "occupation": 2,
+            "organization": 0
+        },
+        "416_eunectes": {
+            "name": {
+                "en": "Eunectes",
+                "zh": "森蚺"
+            },
+            "stars": 6,
+            "limit": false,
+            "occupation": 4,
+            "organization": 0
+        },
+        "423_blemishine": {
+            "name": {
+                "en": "Blemishine",
+                "zh": "瑕光"
+            },
+            "stars": 6,
+            "limit": false,
+            "occupation": 3,
+            "organization": 0
+        },
+        "436_whisperain": {
+            "name": {
+                "en": "Whisperain",
+                "zh": "絮雨"
+            },
+            "stars": 5,
+            "limit": false,
+            "occupation": 5,
+            "organization": 0
+        },
+        "440_pinecone": {
+            "name": {
+                "en": "Pinecone",
+                "zh": "松果"
+            },
+            "stars": 4,
+            "limit": false,
+            "occupation": 3,
+            "organization": 0
+        },
+        "452_beanstalk": {
+            "name": {
+                "en": "Beanstalk",
+                "zh": "豆苗"
+            },
+            "stars": 4,
+            "limit": false,
+            "occupation": 1,
+            "organization": 0
+        },
+        "2013_ceobe": {
+            "name": {
+                "en": "Ceobe",
+                "zh": "刻俄柏"
+            },
+            "stars": 6,
+            "limit": false,
+            "occupation": 7,
+            "organization": 0
+        },
+        "2014_nian": {
+            "name": {
+                "en": "Nian",
+                "zh": "年"
+            },
+            "stars": 6,
+            "limit": true,
+            "occupation": 4,
             "organization": 0
         }
     },
