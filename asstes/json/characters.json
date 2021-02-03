@@ -569,6 +569,146 @@
             "occupation": 3,
             "organization": 0
         },
+        "199_matterhorn": {
+            "name": {
+                "en": "Matterhorn",
+                "zh": "角峰"
+            },
+            "stars": 4,
+            "limit": false,
+            "occupation": 4,
+            "organization": 0
+        },
+        "201_croissant": {
+            "name": {
+                "en": "Croissant",
+                "zh": "可颂"
+            },
+            "stars": 5,
+            "limit": false,
+            "occupation": 4,
+            "organization": 0
+        },
+        "202_saria": {
+            "name": {
+                "en": "Saria",
+                "zh": "塞雷娅"
+            },
+            "stars": 6,
+            "limit": false,
+            "occupation": 4,
+            "organization": 0
+        },
+        "204_platinum": {
+            "name": {
+                "en": "Platinum",
+                "zh": "白金"
+            },
+            "stars": 5,
+            "limit": false,
+            "occupation": 3,
+            "organization": 0
+        },
+        "208_melantha": {
+            "name": {
+                "en": "Melantha",
+                "zh": "玫兰莎"
+            },
+            "stars": 3,
+            "limit": false,
+            "occupation": 2,
+            "organization": 0
+        },
+        "209_cardigan": {
+            "name": {
+                "en": "Cardigan",
+                "zh": "卡提"
+            },
+            "stars": 3,
+            "limit": false,
+            "occupation": 4,
+            "organization": 0
+        },
+        "210_steward": {
+            "name": {
+                "en": "Steward",
+                "zh": "史都华德"
+            },
+            "stars": 3,
+            "limit": false,
+            "occupation": 7,
+            "organization": 0
+        },
+        "211_adnachiel": {
+            "name": {
+                "en": "Adnachiel",
+                "zh": "安德切尔"
+            },
+            "stars": 3,
+            "limit": false,
+            "occupation": 3,
+            "organization": 0
+        },
+        "212_ansel": {
+            "name": {
+                "en": "Ansel",
+                "zh": "安塞尔"
+            },
+            "stars": 3,
+            "limit": false,
+            "occupation": 5,
+            "organization": 0
+        },
+        "213_mostima": {
+            "name": {
+                "en": "Mostima",
+                "zh": "莫斯提马"
+            },
+            "stars": 6,
+            "limit": false,
+            "occupation": 7,
+            "organization": 0
+        },
+        "214_kafka": {
+            "name": {
+                "en": "Kafka",
+                "zh": "卡夫卡"
+            },
+            "stars": 5,
+            "limit": false,
+            "occupation": 8,
+            "organization": 0
+        },
+        "215_manticore": {
+            "name": {
+                "en": "Manticore",
+                "zh": "狮蝎"
+            },
+            "stars": 5,
+            "limit": false,
+            "occupation": 8,
+            "organization": 0
+        },
+        "218_andreana": {
+            "name": {
+                "en": "Andreana",
+                "zh": "安哲拉"
+            },
+            "stars": 5,
+            "limit": false,
+            "occupation": 3,
+            "organization": 0
+        },
+        "219_meteorite": {
+            "name": {
+                "en": "Meteorite",
+                "zh": "陨星"
+            },
+            "stars": 5,
+            "limit": false,
+            "occupation": 3,
+            "organization": 0
+        },
         "": {
             "name": {
                 "en": "",
