@@ -799,6 +799,16 @@
             "occupation": 6,
             "organization": 0
         },
+        "243_waaifu": {
+            "name": {
+                "en": "Waai Fu",
+                "zh": "槐琥"
+            },
+            "stars": 5,
+            "limit": false,
+            "occupation": 8,
+            "organization": 0
+        },
         "248_magallan": {
             "name": {
                 "en": "Magallan",
