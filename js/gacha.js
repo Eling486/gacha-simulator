@@ -64,14 +64,14 @@ function gacha() {
     var all = pool_json.rules.all
     var star_rate = {}
     window.six_rate = pool_json.rules['six'].all
-    if (window.last_six_star > 50) {
+    if (window.last_six_star > 50) { // 根据寻访次数计算6星概率
         window.six_rate = (window.last_six_star - 49) * pool_json.rules['six'].all
     }
     if (window.gacha_times == 10 && window.six_num == 0 && window.five_num == 0) { // 前十抽保底
         star_rate['six'] = window.six_rate * all
         star_rate['five'] = (1 - window.six_rate) * all
     } else {
-        for (key in pool_json.rules) {
+        for (key in pool_json.rules) { // 累加出其他星级的概率
             if (pool_json.rules[key].all) {
                 if (key == 'six') {
                     star_rate[key] = window.six_rate * all
@@ -90,7 +90,7 @@ function gacha() {
     var random_star = getRandom(1, all)
     var _max = all
     var result_star = ""
-    for (key in star_max) {
+    for (key in star_max) { // 判断寻访到的星级
         if (Math.min(star_max[key], random_star) == random_star && star_max[key] <= _max + 0.00000001) {// 避免四舍五入的影响
             result_star = key
             _max = star_max[key]
@@ -114,7 +114,7 @@ function gacha() {
         window.three_num += 1
     }
 
-    if (pool_json.rules[result_star].rate_up) {
+    if (pool_json.rules[result_star].rate_up) { // 若某星干员存在概率提升
         var char_max = {}
         var star_all = 100
         var rate_up_all = 0
@@ -134,13 +134,13 @@ function gacha() {
         }
         if (result_char == 'six' || result_char == 'five' || result_char == 'four' || result_char == 'three') {
             var char_arr = pool_json.content[result_star]
-            for (var j = 0; j < pool_json.rules[result_star].rate_up.length; j++) {
+            for (var j = 0; j < pool_json.rules[result_star].rate_up.length; j++) { // 移除当期的up干员
                 var char_index = char_arr.indexOf(pool_json.rules[result_star].rate_up[j].char_id)
                 if (char_index >= 0) {
                     char_arr.splice(char_index, 1)
                 }
             }
-            if (pool_json.rules[result_star].weight_up) {
+            if (pool_json.rules[result_star].weight_up) { // 若有加权的干员
                 for (index in pool_json.rules[result_star].weight_up) {
                     for (var i = 0; i < pool_json.rules[result_star].weight_up[index].weight - 1; i++) {
                         char_arr.push(pool_json.rules[result_star].weight_up[index].char_id)
@@ -162,7 +162,7 @@ function gacha() {
         var random_char2 = getRandom(1, char_arr.length)
         var result_char = char_arr[random_char2 - 1]
     }
-    return result_char
+    return result_char // 返回寻访到的干员id
 }
 
 function getRandom(min, max) {
