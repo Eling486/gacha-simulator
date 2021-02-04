@@ -1,0 +1,45 @@
+{
+    "resources": [
+        {
+            "name": "basic_ui",
+            "url": "asstes/img/pools/basic.json"
+        },
+        {
+            "name": "pool_ui",
+            "url": "asstes/img/pools/SP_035.json"
+        }
+    ],
+    "position":{
+        "bg": {
+            "x": 50,
+            "y": 65,
+            "scale_x": 1.7,
+            "scale_y": 1.3
+        },
+        "mg_left": {
+            "x": 23,
+            "y": 58,
+            "scale_x": 1,
+            "scale_y": 0.92
+        },
+        "mg_right": {
+            "x": 78.5,
+            "y": 57,
+            "scale_x": 1,
+            "scale_y": 0.92
+        },
+        "fg": {
+            "x": 50,
+            "y": 65,
+            "scale_x": 1,
+            "scale_y": 0.92
+        }
+        ,
+        "title": {
+            "x": 50,
+            "y": 47,
+            "scale_x": 1,
+            "scale_y": 0.92
+        }
+    }
+}
