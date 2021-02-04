@@ -1398,6 +1398,26 @@
             "limit": true,
             "occupation": 4,
             "organization": 0
+        },
+        "294_ayerscarpe": {
+            "name": {
+                "en": "Ayerscarpe",
+                "zh": "断崖"
+            },
+            "stars": 5,
+            "limit": false,
+            "occupation": 2,
+            "organization": 7
+        },
+        "": {
+            "name": {
+                "en": "",
+                "zh": ""
+            },
+            "stars": 0,
+            "limit": false,
+            "occupation": 0,
+            "organization": 0
         }
     },
     "occupation": {
