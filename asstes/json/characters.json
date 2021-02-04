@@ -799,6 +799,16 @@
             "occupation": 6,
             "organization": 5
         },
+        "243_waaifu": {
+            "name": {
+                "en": "Waai Fu",
+                "zh": "槐琥"
+            },
+            "stars": 5,
+            "limit": false,
+            "occupation": 8,
+            "organization": 0
+        },
         "248_magallan": {
             "name": {
                 "en": "Magallan",
@@ -1457,7 +1467,7 @@
     "organizations": {
         "1": {
             "name": "罗德岛",
-            "icon_name": "rhodes_island_2"
+            "icon_name": "rhodes_island"
         },
         "2": {
             "name": "龙门近卫局",

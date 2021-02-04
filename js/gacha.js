@@ -13,6 +13,7 @@ function loadJson(path){
 
 function resetStatistics() {
     window.gacha_times = 0
+    window.real_gacha_times = 0
     window.gacha_result = []
     window.last_six_star = 0
     window.six_num = 0
@@ -54,6 +55,7 @@ function gachaTenTimes() {
 
 function gacha() {
     window.gacha_times += 1
+    window.real_gacha_times +=1
     for (index in window.pools_json.pools) {
         if (window.pools_json.pools[index].id == window.pool_id) {
             var pool_json = window.pools_json.pools[index]
@@ -67,7 +69,7 @@ function gacha() {
     if (window.last_six_star > 50) { // 根据寻访次数计算6星概率
         window.six_rate = (window.last_six_star - 49) * pool_json.rules['six'].all
     }
-    if (window.gacha_times == 10 && window.six_num == 0 && window.five_num == 0) { // 前十抽保底
+    if (window.real_gacha_times == 10 && window.six_num == 0 && window.five_num == 0) { // 前十抽保底
         star_rate['six'] = window.six_rate * all
         star_rate['five'] = (1 - window.six_rate) * all
     } else {
