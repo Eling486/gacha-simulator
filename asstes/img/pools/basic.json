@@ -2,11 +2,11 @@
 
 "basic_bg.png":
 {
-	"frame": {"x":0,"y":777,"w":1024,"h":517},
+	"frame": {"x":0,"y":777,"w":1024,"h":585},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":1024,"h":517},
-	"sourceSize": {"w":1024,"h":517}
+	"spriteSourceSize": {"x":0,"y":0,"w":1024,"h":585},
+	"sourceSize": {"w":1024,"h":585}
 },
 "btn_contract_left.png":
 {
@@ -181,8 +181,8 @@
 	"version": "1.0",
 	"image": "basic.png",
 	"format": "RGBA8888",
-	"size": {"w":1024,"h":1294},
+	"size": {"w":1024,"h":1362},
 	"scale": "1",
-	"smartupdate": "$TexturePacker:SmartUpdate:e47fb8cd1c3114198a5a246a06a7f601:c367d75dfde9bed9eb578f4ea8ad0295:532e39fc0dbecca3521067064434d3e9$"
+	"smartupdate": "$TexturePacker:SmartUpdate:402faaf29505a1e276766b0c8837a8e8:68c4d0acfe38beb2528d4cf0d62d67e0:532e39fc0dbecca3521067064434d3e9$"
 }
 }

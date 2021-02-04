@@ -64,5 +64,19 @@
             "scale_x": 1,
             "scale_y": 1
         }
+    },
+    "add_from_basic":{
+        "btn_details_left01": {
+            "x": 35,
+            "y": 70,
+            "scale_x": 1,
+            "scale_y": 1
+        },
+        "btn_details_left02": {
+            "x": 79,
+            "y": 70,
+            "scale_x": 1,
+            "scale_y": 1
+        }
     }
 }

@@ -1,4 +1,12 @@
 {
+    "preload":{
+        "basic_bg": {
+            "x": 50,
+            "y": 70,
+            "scale_x": 1.5,
+            "scale_y": 1.5
+        }
+    },
     "position":{
         "details_box": {
             "x": 23,
@@ -42,5 +50,8 @@
             "scale_x": 1,
             "scale_y": 1
         }
+    },
+    "text":{
+        
     }
 }

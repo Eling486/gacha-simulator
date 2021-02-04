@@ -181,7 +181,7 @@
         </struct>
         <key>individualSpriteSettings</key>
         <map type="IndividualSpriteSettingsMap">
-            <key type="filename">../../../../../gacha-素材/ui/bg.png</key>
+            <key type="filename">basic_bg.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -190,14 +190,14 @@
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>256,129,512,259</rect>
+                <rect>256,146,512,293</rect>
                 <key>scale9Paddings</key>
-                <rect>256,129,512,259</rect>
+                <rect>256,146,512,293</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../../../gacha-素材/ui/btn_contract_left.png</key>
-            <key type="filename">../../../../../gacha-素材/ui/btn_contract_right.png</key>
+            <key type="filename">btn_contract_left.png</key>
+            <key type="filename">btn_contract_right.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -212,7 +212,7 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../../../gacha-素材/ui/btn_details_left.png</key>
+            <key type="filename">btn_details_left.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -227,7 +227,7 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../../../gacha-素材/ui/btn_details_right.png</key>
+            <key type="filename">btn_details_right.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -242,7 +242,7 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../../../gacha-素材/ui/btn_once.png</key>
+            <key type="filename">btn_once.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -257,7 +257,7 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../../../gacha-素材/ui/btn_ten_times.png</key>
+            <key type="filename">btn_ten_times.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -272,7 +272,7 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../../../gacha-素材/ui/clock.png</key>
+            <key type="filename">clock.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -287,7 +287,7 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../../../gacha-素材/ui/contract_num.png</key>
+            <key type="filename">contract_num.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -302,7 +302,7 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../../../gacha-素材/ui/details_box.png</key>
+            <key type="filename">details_box.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -317,7 +317,7 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../../../gacha-素材/ui/display_box.png</key>
+            <key type="filename">display_box.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -332,7 +332,7 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../../../gacha-素材/ui/jade.png</key>
+            <key type="filename">jade.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -347,7 +347,7 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../../../gacha-素材/ui/tentimes_up.png</key>
+            <key type="filename">tentimes_up.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -362,7 +362,7 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../../../gacha-素材/ui/tentimes_up_bg.png</key>
+            <key type="filename">tentimes_up_bg.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -377,7 +377,7 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../../../gacha-素材/ui/tentimes_up_text.png</key>
+            <key type="filename">tentimes_up_text.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -392,7 +392,7 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../../../gacha-素材/ui/tips_left_bottom.png</key>
+            <key type="filename">tips_left_bottom.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -407,7 +407,7 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../../../gacha-素材/ui/tips_left_top.png</key>
+            <key type="filename">tips_left_top.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -422,8 +422,8 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../../../gacha-素材/ui/tips_top_left.png</key>
-            <key type="filename">../../../../../gacha-素材/ui/tips_top_right.png</key>
+            <key type="filename">tips_top_left.png</key>
+            <key type="filename">tips_top_right.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -438,7 +438,7 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../../../gacha-素材/ui/voucher_once.png</key>
+            <key type="filename">voucher_once.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -453,7 +453,7 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../../../gacha-素材/ui/voucher_sp.png</key>
+            <key type="filename">voucher_sp.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -468,7 +468,7 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../../../gacha-素材/ui/voucher_ten_times.png</key>
+            <key type="filename">voucher_ten_times.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -486,28 +486,28 @@
         </map>
         <key>fileList</key>
         <array>
-            <filename>../../../../../gacha-素材/ui/bg.png</filename>
-            <filename>../../../../../gacha-素材/ui/btn_contract_left.png</filename>
-            <filename>../../../../../gacha-素材/ui/btn_contract_right.png</filename>
-            <filename>../../../../../gacha-素材/ui/btn_details_left.png</filename>
-            <filename>../../../../../gacha-素材/ui/btn_details_right.png</filename>
-            <filename>../../../../../gacha-素材/ui/btn_once.png</filename>
-            <filename>../../../../../gacha-素材/ui/btn_ten_times.png</filename>
-            <filename>../../../../../gacha-素材/ui/clock.png</filename>
-            <filename>../../../../../gacha-素材/ui/contract_num.png</filename>
-            <filename>../../../../../gacha-素材/ui/details_box.png</filename>
-            <filename>../../../../../gacha-素材/ui/display_box.png</filename>
-            <filename>../../../../../gacha-素材/ui/jade.png</filename>
-            <filename>../../../../../gacha-素材/ui/tentimes_up.png</filename>
-            <filename>../../../../../gacha-素材/ui/tentimes_up_bg.png</filename>
-            <filename>../../../../../gacha-素材/ui/tentimes_up_text.png</filename>
-            <filename>../../../../../gacha-素材/ui/tips_left_bottom.png</filename>
-            <filename>../../../../../gacha-素材/ui/tips_left_top.png</filename>
-            <filename>../../../../../gacha-素材/ui/tips_top_left.png</filename>
-            <filename>../../../../../gacha-素材/ui/tips_top_right.png</filename>
-            <filename>../../../../../gacha-素材/ui/voucher_once.png</filename>
-            <filename>../../../../../gacha-素材/ui/voucher_sp.png</filename>
-            <filename>../../../../../gacha-素材/ui/voucher_ten_times.png</filename>
+            <filename>basic_bg.png</filename>
+            <filename>btn_contract_left.png</filename>
+            <filename>btn_contract_right.png</filename>
+            <filename>btn_details_left.png</filename>
+            <filename>btn_details_right.png</filename>
+            <filename>btn_once.png</filename>
+            <filename>btn_ten_times.png</filename>
+            <filename>clock.png</filename>
+            <filename>contract_num.png</filename>
+            <filename>details_box.png</filename>
+            <filename>display_box.png</filename>
+            <filename>jade.png</filename>
+            <filename>tentimes_up.png</filename>
+            <filename>tentimes_up_bg.png</filename>
+            <filename>tentimes_up_text.png</filename>
+            <filename>tips_left_bottom.png</filename>
+            <filename>tips_left_top.png</filename>
+            <filename>tips_top_left.png</filename>
+            <filename>tips_top_right.png</filename>
+            <filename>voucher_once.png</filename>
+            <filename>voucher_sp.png</filename>
+            <filename>voucher_ten_times.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>
