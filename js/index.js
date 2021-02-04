@@ -1,171 +1,69 @@
-function loadData() {
-    return new Promise(resolve => {
-        var pools_path = './asstes/json/pools.json'
-        var chars_path = './asstes/json/characters.json'
-        var request = new XMLHttpRequest();
-        request.open("get", pools_path);
-        request.send(null);
-        request.onload = function () {
-            if (request.status == 200) {
-                window.pools_json = JSON.parse(request.responseText);
-                request.open("get", chars_path);
-                request.send(null);
-                request.onload = function () {
-                    if (request.status == 200) {
-                        window.chars_json = JSON.parse(request.responseText);
-                        window.pool_id = window.pools_json['default']
-                        resetStatistics()
-                        resolve('loaded')
-                    }
-                }
-            }
-        }
-    })
+let Application = PIXI.Application,
+  Container = PIXI.Container,
+  loader = new PIXI.Loader(),
+  resources = loader.resources,
+  TextureCache = PIXI.utils.TextureCache,
+  Sprite = PIXI.Sprite,
+  Rectangle = PIXI.Rectangle;
+
+let app, bg, grid_w, grid_h, page_data
+
+window.onresize = updatePageSize()
+
+function updatePageSize() {
+  const w = window.innerWidth
+  const h = window.innerHeight
+  grid_w = parseInt(w / 100)
+  grid_h = parseInt(h / 100)
+  /*
+  if(Math.min(w, h) == w){
+    window.app_w = w
+    window.app_h = w * 9 / 16
+  }else{
+    window.app_h = h - 50
+    window.app_w = (h - 50) * 16 / 9
+  }*/
 }
 
-function resetStatistics() {
-    window.gacha_times = 0
-    window.last_six_star = 0
-    window.six_num = 0
-    window.five_num = 0
-    window.four_num = 0
-    window.three_num = 0
+async function loadGachaPage() {
+  //const ui_data = await loadJson('./asstes/json/ui/pools/SP_035.json')
+  page_data = await loadJson(`./asstes/json/ui/pools/${window.pool_id}.json`)
+  updatePageSize()
+  loadGachaPageRes();
 }
 
-window.onload = async function () {
-    await loadData()
-    console.log(window.pools_json)
-    console.log(window.chars_json)
+function loadGachaPageRes() {
+  app = new Application({
+    width: window.innerWidth,
+    height: window.innerHeight,
+    antialias: true,
+    transparent: false,
+    resolution: 1
+  });
+
+  document.body.appendChild(app.view);
+
+  loader
+    .add(page_data.resources)
+    .load(setup);
+
+  function setup() {
+    UI_pools = loader.resources['pool_ui'].textures;
+    for(index in page_data.position){
+      let _position = page_data.position[index]
+      let _add = `${index} = new Sprite(UI_pools["${index}.png"]);
+        app.stage.addChild(${index});
+        ${index}.scale.set(${_position.scale_x}, ${_position.scale_y});
+        ${index}.position.set(grid_w * ${_position.x} - ${index}.width / 2, grid_h * ${_position.y} - ${index}.height / 2)`;
+      eval(_add)
+    }
+    
+    /*
+    //Make the treasure box using the alias
+    bg = new Sprite(UI_pools["bg.png"]);
+    app.stage.addChild(bg);
+    bg.scale.set(1.7, 1.3);
+    bg.position.set(grid_w * 50 - bg.width / 2, grid_h * 70 - bg.height / 2)*/
+  }
 }
 
-function gachaOnce() {
-
-}
-
-function gachaTenTimes() {
-    var timeStart = Date.now()
-    for (var i = 0; i < 100000000; i++) {
-        gacha()
-    }
-    var timeEnd = Date.now()
-    var timeDiff =  timeEnd - timeStart 
-    console.log(window.six_num, window.five_num)
-    console.log('耗时：' + timeDiff)
-}
-
-function gacha() {
-    window.gacha_times += 1
-    for (index in window.pools_json.pools) {
-        if (window.pools_json.pools[index].id == window.pool_id) {
-            var pool_json = window.pools_json.pools[index]
-            break
-        }
-    }
-
-    var all = pool_json.rules.all
-    var star_rate = {}
-    window.six_rate = pool_json.rules['six'].all
-    if (window.last_six_star > 50) {
-        window.six_rate = (window.last_six_star - 49) * pool_json.rules['six'].all
-    }
-    if (window.gacha_times == 10 && window.six_num == 0 && window.five_num == 0) { // 前十抽保底
-        star_rate['six'] = window.six_rate * all
-        star_rate['five'] = (1 - window.six_rate) * all
-    } else {
-        for (key in pool_json.rules) {
-            if (pool_json.rules[key].all) {
-                if (key == 'six') {
-                    star_rate[key] = window.six_rate * all
-                } else {
-                    star_rate[key] = ((1 - window.six_rate) * pool_json.rules[key].all / (1 - pool_json.rules['six'].all)) * all
-                }
-            }
-        }
-    }
-    var star_max = {}
-    var _count = 0
-    for (key in star_rate) {
-        star_max[key] = star_rate[key] + _count
-        _count += star_rate[key]
-    }
-    var random_star = getRandom(1, all)
-    var _max = all
-    var result_star = ""
-    for (key in star_max) {
-        if (Math.min(star_max[key], random_star) == random_star && star_max[key] <= _max + 0.00000001) {// 避免四舍五入的影响
-            result_star = key
-            _max = star_max[key]
-        }
-    }
-
-    if (result_star == 'six') {
-        window.last_six_star = 0
-        window.six_num += 1
-    }
-    if (result_star == 'five') {
-        window.last_six_star += 1
-        window.five_num += 1
-    }
-    if (result_star == 'four') {
-        window.last_six_star += 1
-        window.four_num += 1
-    }
-    if (result_star == 'three') {
-        window.last_six_star += 1
-        window.three_num += 1
-    }
-
-    if (pool_json.rules[result_star].rate_up) {
-        var char_max = {}
-        var star_all = 100
-        var rate_up_all = 0
-        for (var i = 0; i < pool_json.rules[result_star].rate_up.length; i++) {
-            rate_up_all += pool_json.rules[result_star].rate_up[i].rate * star_all
-            char_max[pool_json.rules[result_star].rate_up[i].char_id] = rate_up_all
-        }
-        char_max[result_star] = star_all
-        var random_char = getRandom(1, star_all)
-        var _max_char = all
-        var result_char = ""
-        for (key in char_max) {
-            if (Math.min(char_max[key], random_char) == random_char && char_max[key] <= _max_char) {
-                result_char = key
-                _max_char = char_max[key]
-            }
-        }
-        if (result_char == 'six' || result_char == 'five' || result_char == 'four' || result_char == 'three') {
-            var char_arr = pool_json.content[result_star]
-            for (var j = 0; j < pool_json.rules[result_star].rate_up.length; j++) {
-                var char_index = char_arr.indexOf(pool_json.rules[result_star].rate_up[j].char_id)
-                if (char_index >= 0) {
-                    char_arr.splice(char_index, 1)
-                }
-            }
-            if (pool_json.rules[result_star].weight_up) {
-                for (index in pool_json.rules[result_star].weight_up) {
-                    for (var i = 0; i < pool_json.rules[result_star].weight_up[index].weight - 1; i++) {
-                        char_arr.push(pool_json.rules[result_star].weight_up[index].char_id)
-                    }
-                }
-            }
-            var random_char2 = getRandom(1, char_arr.length)
-            result_char = char_arr[random_char2 - 1]
-        }
-    } else {
-        var char_arr = pool_json.content[result_star]
-        if (pool_json.rules[result_star].weight_up) {
-            for (index in pool_json.rules[result_star].weight_up) {
-                for (var i = 0; i < pool_json.rules[result_star].weight_up[index].weight - 1; i++) {
-                    char_arr.push(pool_json.rules[result_star].weight_up[index].char_id)
-                }
-            }
-        }
-        var random_char2 = getRandom(1, char_arr.length)
-        var result_char = char_arr[random_char2 - 1]
-    }
-    //console.log(result_star, result_char)
-}
-
-function getRandom(min, max) {
-    return parseInt(Math.random() * (max - min + 1) + min)
-}
