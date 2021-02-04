@@ -1,0 +1,188 @@
+{"frames": {
+
+"basic_bg.png":
+{
+	"frame": {"x":0,"y":777,"w":1024,"h":517},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":1024,"h":517},
+	"sourceSize": {"w":1024,"h":517}
+},
+"btn_contract_left.png":
+{
+	"frame": {"x":90,"y":61,"w":220,"h":76},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":220,"h":76},
+	"sourceSize": {"w":220,"h":76}
+},
+"btn_contract_right.png":
+{
+	"frame": {"x":310,"y":61,"w":220,"h":76},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":220,"h":76},
+	"sourceSize": {"w":220,"h":76}
+},
+"btn_details_left.png":
+{
+	"frame": {"x":0,"y":157,"w":267,"h":98},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":267,"h":98},
+	"sourceSize": {"w":267,"h":98}
+},
+"btn_details_right.png":
+{
+	"frame": {"x":608,"y":61,"w":267,"h":96},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":267,"h":96},
+	"sourceSize": {"w":267,"h":96}
+},
+"btn_once.png":
+{
+	"frame": {"x":0,"y":271,"w":249,"h":118},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":249,"h":118},
+	"sourceSize": {"w":249,"h":118}
+},
+"btn_ten_times.png":
+{
+	"frame": {"x":678,"y":157,"w":220,"h":114},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":220,"h":114},
+	"sourceSize": {"w":220,"h":114}
+},
+"clock.png":
+{
+	"frame": {"x":0,"y":0,"w":21,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":21,"h":21},
+	"sourceSize": {"w":21,"h":21}
+},
+"contract_num.png":
+{
+	"frame": {"x":21,"y":0,"w":89,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":89,"h":24},
+	"sourceSize": {"w":89,"h":24}
+},
+"details_box.png":
+{
+	"frame": {"x":0,"y":552,"w":550,"h":160},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":550,"h":160},
+	"sourceSize": {"w":550,"h":160}
+},
+"display_box.png":
+{
+	"frame": {"x":550,"y":552,"w":205,"h":225},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":205,"h":225},
+	"sourceSize": {"w":205,"h":225}
+},
+"jade.png":
+{
+	"frame": {"x":530,"y":61,"w":78,"h":78},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":78,"h":78},
+	"sourceSize": {"w":78,"h":78}
+},
+"tentimes_up.png":
+{
+	"frame": {"x":249,"y":271,"w":552,"h":132},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":552,"h":132},
+	"sourceSize": {"w":552,"h":132}
+},
+"tentimes_up_bg.png":
+{
+	"frame": {"x":0,"y":403,"w":527,"h":149},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":527,"h":149},
+	"sourceSize": {"w":527,"h":149}
+},
+"tentimes_up_text.png":
+{
+	"frame": {"x":267,"y":157,"w":411,"h":108},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":411,"h":108},
+	"sourceSize": {"w":411,"h":108}
+},
+"tips_left_bottom.png":
+{
+	"frame": {"x":218,"y":0,"w":226,"h":53},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":226,"h":53},
+	"sourceSize": {"w":226,"h":53}
+},
+"tips_left_top.png":
+{
+	"frame": {"x":444,"y":0,"w":230,"h":58},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":230,"h":58},
+	"sourceSize": {"w":230,"h":58}
+},
+"tips_top_left.png":
+{
+	"frame": {"x":674,"y":0,"w":131,"h":61},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":131,"h":61},
+	"sourceSize": {"w":131,"h":61}
+},
+"tips_top_right.png":
+{
+	"frame": {"x":805,"y":0,"w":131,"h":61},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":131,"h":61},
+	"sourceSize": {"w":131,"h":61}
+},
+"voucher_once.png":
+{
+	"frame": {"x":0,"y":61,"w":90,"h":68},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":90,"h":68},
+	"sourceSize": {"w":90,"h":68}
+},
+"voucher_sp.png":
+{
+	"frame": {"x":163,"y":0,"w":55,"h":39},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":55,"h":39},
+	"sourceSize": {"w":55,"h":39}
+},
+"voucher_ten_times.png":
+{
+	"frame": {"x":110,"y":0,"w":53,"h":37},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":53,"h":37},
+	"sourceSize": {"w":53,"h":37}
+}},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "basic.png",
+	"format": "RGBA8888",
+	"size": {"w":1024,"h":1294},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:e47fb8cd1c3114198a5a246a06a7f601:c367d75dfde9bed9eb578f4ea8ad0295:532e39fc0dbecca3521067064434d3e9$"
+}
+}

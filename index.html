@@ -3,8 +3,13 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1">
     <title>Hello World</title>
     <script src="js/pixi/pixi.min.js"></script>
+    <script src="js/pixi/pixi-spine.js"></script>
+    <script src="js/vue/vue.min.js"></script>
+    <script src="js/gacha.js"></script>
     <script src="js/index.js"></script>
     <style>
         * {
@@ -16,30 +21,35 @@
 
 <body>
     <div class="app">
-        <button onclick=""></button>
     </div>
-    <!--<script type="text/javascript">
-        let type = "WebGL"
-        if (!PIXI.utils.isWebGLSupported()) {
-            type = "canvas"
-        }
+    <script>
+    </script>
+    <!--<script  type="text/javascript">
+        function initSpine() {
+            const app = new PIXI.Application();
+            app.loader
+                .add('demo', './asstes/animate/mini_char/char_196_sunbr.skel')
+                .load((loader, res) => {
+                    let demo = new PIXI.spine.Spine(res.demo.spineData);
+                    console.log(demo)
+                    demo.state.setAnimation(0, 'Default', true);
+                    demo.x = demo.y = 200;
 
-        PIXI.utils.sayHello(type)
-        //Create a Pixi Application
-        let app = new PIXI.Application({
-            //width: 256,         // default: 800
-            //height: 256,        // default: 600
-            antialias: true,    // default: false
-            transparent: false, // default: false
-            resolution: 1       // default: 1
-        });
-        //Add the canvas that Pixi automatically created for you to the HTML document
-        document.querySelector('.app').appendChild(app.view)
-        app.renderer.view.style.position = "absolute";
-        app.renderer.view.style.display = "block";
-        app.renderer.view.style.margin = 'auto'
-        app.renderer.autoResize = true;
-        app.renderer.resize(window.innerHeight * 16 / 9, window.innerHeight);
+                    // Enable drawdebug，Default is false
+                    demo.drawDebug = true;
+                    demo.drawBones = true;
+                    demo.drawRegionAttachments = true;
+                    demo.drawClipping = true;
+                    demo.drawMeshHull = true;
+                    demo.drawMeshTriangles = true;
+                    demo.drawPaths = true;
+                    demo.drawBoundingBoxes = true;
+
+                    app.stage.addChild(demo);
+                });
+
+            document.body.appendChild(app.view);
+        } 
     </script>-->
 </body>
 
