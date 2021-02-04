@@ -33,13 +33,36 @@
             "y": 65,
             "scale_x": 1,
             "scale_y": 0.92
-        }
-        ,
+        },
         "title": {
             "x": 50,
             "y": 47,
             "scale_x": 1,
             "scale_y": 0.92
+        },
+        "name_nian": {
+            "x": 37,
+            "y": 25,
+            "scale_x": 1,
+            "scale_y": 1
+        },
+        "name_aak": {
+            "x": 97.7,
+            "y": 38,
+            "scale_x": 1,
+            "scale_y": 1
+        },
+        "name_hung": {
+            "x": 6.7,
+            "y": 37,
+            "scale_x": 1,
+            "scale_y": 1
+        },
+        "up": {
+            "x": 28,
+            "y": 79,
+            "scale_x": 1,
+            "scale_y": 1
         }
     }
 }

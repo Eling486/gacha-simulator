@@ -6,7 +6,7 @@ let Application = PIXI.Application,
   Sprite = PIXI.Sprite,
   Rectangle = PIXI.Rectangle;
 
-let app, bg, grid_w, grid_h, page_data
+let app, bg, grid_w, grid_h, pool_ui_data, basic_ui_data
 
 window.onresize = updatePageSize()
 
@@ -26,8 +26,8 @@ function updatePageSize() {
 }
 
 async function loadGachaPage() {
-  //const ui_data = await loadJson('./asstes/json/ui/pools/SP_035.json')
-  page_data = await loadJson(`./asstes/json/ui/pools/${window.pool_id}.json`)
+  basic_ui_data = await loadJson('./asstes/json/ui/pools/basic.json')
+  pool_ui_data = await loadJson(`./asstes/json/ui/pools/${window.pool_id}.json`)
   updatePageSize()
   loadGachaPageRes();
 }
@@ -44,14 +44,25 @@ function loadGachaPageRes() {
   document.body.appendChild(app.view);
 
   loader
-    .add(page_data.resources)
+    .add(pool_ui_data.resources)
     .load(setup);
 
   function setup() {
     UI_pools = loader.resources['pool_ui'].textures;
-    for(index in page_data.position){
-      let _position = page_data.position[index]
-      let _add = `${index} = new Sprite(UI_pools["${index}.png"]);
+    UI_basic = loader.resources['basic_ui'].textures;
+
+    for(index in pool_ui_data.position){
+      let _position = pool_ui_data.position[index]
+      let _add = `${index} = new Sprite(UI_pools["${index.split('-')[0]}.png"]);
+        app.stage.addChild(${index});
+        ${index}.scale.set(${_position.scale_x}, ${_position.scale_y});
+        ${index}.position.set(grid_w * ${_position.x} - ${index}.width / 2, grid_h * ${_position.y} - ${index}.height / 2)`;
+      eval(_add)
+    }
+
+    for(index in basic_ui_data.position){
+      let _position = basic_ui_data.position[index] // 下行用'-'分割字符串是用来进行相同纹理的元素区分的
+      let _add = `${index} = new Sprite(UI_basic["${index.split('-')[0]}.png"]);
         app.stage.addChild(${index});
         ${index}.scale.set(${_position.scale_x}, ${_position.scale_y});
         ${index}.position.set(grid_w * ${_position.x} - ${index}.width / 2, grid_h * ${_position.y} - ${index}.height / 2)`;

@@ -1,0 +1,46 @@
+{
+    "position":{
+        "details_box": {
+            "x": 23,
+            "y": 95.5,
+            "scale_x": 1,
+            "scale_y": 1
+        },
+        "btn_once": {
+            "x": 73.83,
+            "y": 97.3,
+            "scale_x": 1,
+            "scale_y": 1
+        },
+        "btn_ten_times": {
+            "x": 90,
+            "y": 97,
+            "scale_x": 1,
+            "scale_y": 1
+        },
+        "tentimes_up": {
+            "x": 81.7,
+            "y": 76.5,
+            "scale_x": 1,
+            "scale_y": 1
+        },
+        "voucher_once": {
+            "x": 69,
+            "y": 89.5,
+            "scale_x": 0.9,
+            "scale_y": 0.9
+        },
+        "voucher_ten_times": {
+            "x": 84.2,
+            "y": 88.9,
+            "scale_x": 1.08,
+            "scale_y": 1.08
+        },
+        "tentimes_up_text": {
+            "x": 85.05,
+            "y": 79.5,
+            "scale_x": 1,
+            "scale_y": 1
+        }
+    }
+}
