@@ -12,12 +12,12 @@
     "position":{
         "bg": {
             "x": 50,
-            "y": 65,
-            "scale_x": 1.7,
+            "y": 67,
+            "scale_x": 1.6,
             "scale_y": 1.3
         },
         "mg_left": {
-            "x": 23,
+            "x": 25,
             "y": 58,
             "scale_x": 1,
             "scale_y": 0.92
@@ -30,36 +30,36 @@
         },
         "fg": {
             "x": 50,
-            "y": 65,
-            "scale_x": 1,
-            "scale_y": 0.92
+            "y": 68,
+            "scale_x": 0.95,
+            "scale_y": 0.95
         },
         "title": {
             "x": 50,
-            "y": 47,
+            "y": 50,
             "scale_x": 1,
-            "scale_y": 0.92
+            "scale_y": 1
         },
         "name_nian": {
-            "x": 37,
+            "x": 34.5,
             "y": 25,
             "scale_x": 1,
             "scale_y": 1
         },
         "name_aak": {
-            "x": 97.7,
+            "x": 101.5,
             "y": 38,
             "scale_x": 1,
             "scale_y": 1
         },
         "name_hung": {
-            "x": 6.7,
+            "x": 5,
             "y": 37,
             "scale_x": 1,
             "scale_y": 1
         },
         "up": {
-            "x": 28,
+            "x": 31,
             "y": 79,
             "scale_x": 1,
             "scale_y": 1

@@ -10,20 +10,27 @@ let Application = PIXI.Application,
 
 let app, bg, grid_w, grid_h, pool_ui_data, basic_ui_data
 
-window.onresize = updatePageSize()
+// window.onresize = updatePageSize()
 
 function updatePageSize() {
+  window.app_h = 650
+  window.app_w = window.app_h * 16 / 9
+  grid_w = parseInt(window.app_w / 100)
+  grid_h = parseInt(window.app_h / 100)
+  /*
   const w = window.innerWidth
   const h = window.innerHeight
-  grid_w = parseInt(w / 100)
-  grid_h = parseInt(h / 100)
-  /*
-  if(Math.min(w, h) == w){
+  console.log(Math.min(w, h * 16 / 9) == w)
+  if(Math.min(w, h * 9 / 16) == w){
     window.app_w = w
     window.app_h = w * 9 / 16
+    grid_w = parseInt(window.app_w / 100)
+    grid_h = parseInt(window.app_h / 100)
   }else{
-    window.app_h = h - 50
-    window.app_w = (h - 50) * 16 / 9
+    window.app_h = h
+    window.app_w = h * 16 / 9
+    grid_w = parseInt(window.app_w / 100)
+    grid_h = parseInt(window.app_h / 100)
   }*/
 }
 
@@ -36,8 +43,8 @@ async function loadGachaPage() {
 
 function loadGachaPageRes() {
   app = new Application({
-    width: window.innerWidth,
-    height: window.innerHeight,
+    width: window.app_w,
+    height: window.app_h,
     antialias: true,
     transparent: false,
     resolution: 1
@@ -80,7 +87,6 @@ function loadGachaPageRes() {
         addSprite(pool_ui_data.add_from_basic, index, 'UI_basic')
       }
     }
-    /*
     let style = new TextStyle({
       fontFamily: "Arial",
       fontSize: 36,
@@ -93,8 +99,10 @@ function loadGachaPageRes() {
       dropShadowAngle: Math.PI / 6,
       dropShadowDistance: 6,
     });
+    /*
     let message = new Text("Hello Pixi!", style);
-    app.stage.addChild(message);*/
+    app.stage.addChild(message);
+    */
   }
 }
 
