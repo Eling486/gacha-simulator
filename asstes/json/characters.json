@@ -117,7 +117,7 @@
             "stars": 6,
             "limit": true,
             "occupation": 3,
-            "organization": 0
+            "organization": 26
         },
         "115_lindong": {
             "name": {
@@ -297,7 +297,7 @@
             "stars": 4,
             "limit": false,
             "occupation": 7,
-            "organization": 0
+            "organization": 29
         },
         "143_specter": {
             "name": {
@@ -317,7 +317,7 @@
             "stars": 5,
             "limit": false,
             "occupation": 8,
-            "organization": 0
+            "organization": 28
         },
         "145_provence": {
             "name": {
@@ -357,7 +357,7 @@
             "stars": 4,
             "limit": false,
             "occupation": 1,
-            "organization": 0
+            "organization": 28
         },
         "150_cuora": {
             "name": {
@@ -397,7 +397,7 @@
             "stars": 5,
             "limit": false,
             "occupation": 7,
-            "organization": 0
+            "organization": 29
         },
         "166_skyfire": {
             "name": {
@@ -407,7 +407,7 @@
             "stars": 5,
             "limit": false,
             "occupation": 7,
-            "organization": 0
+            "organization": 29
         },
         "171_warfarin": {
             "name": {
@@ -497,7 +497,7 @@
             "stars": 4,
             "limit": false,
             "occupation": 2,
-            "organization": 0
+            "organization": 29
         },
         "188_hellagur": {
             "name": {
@@ -527,7 +527,7 @@
             "stars": 3,
             "limit": false,
             "occupation": 1,
-            "organization": 0
+            "organization": 32
         },
         "193_frostleaf": {
             "name": {
@@ -667,7 +667,7 @@
             "stars": 6,
             "limit": false,
             "occupation": 7,
-            "organization": 0
+            "organization": 31
         },
         "214_kafka": {
             "name": {
@@ -727,7 +727,7 @@
             "stars": 6,
             "limit": false,
             "occupation": 8,
-            "organization": 0
+            "organization": 33
         },
         "226_hung": {
             "name": {
@@ -737,7 +737,7 @@
             "stars": 5,
             "limit": false,
             "occupation": 4,
-            "organization": 0
+            "organization": 33
         },
         "235_jessica": {
             "name": {
@@ -807,7 +807,7 @@
             "stars": 5,
             "limit": false,
             "occupation": 8,
-            "organization": 0
+            "organization": 33
         },
         "248_magallan": {
             "name": {
@@ -827,7 +827,7 @@
             "stars": 6,
             "limit": false,
             "occupation": 8,
-            "organization": 0
+            "organization": 29
         },
         "253_greyy": {
             "name": {
@@ -867,7 +867,7 @@
             "stars": 5,
             "limit": false,
             "occupation": 1,
-            "organization": 0
+            "organization": 29
         },
         "263_skadi": {
             "name": {
@@ -897,7 +897,7 @@
             "stars": 4,
             "limit": false,
             "occupation": 4,
-            "organization": 0
+            "organization": 31
         },
         "272_jaye": {
             "name": {
@@ -937,7 +937,7 @@
             "stars": 3,
             "limit": false,
             "occupation": 6,
-            "organization": 0
+            "organization": 32
         },
         "279_executor": {
             "name": {
@@ -947,7 +947,7 @@
             "stars": 5,
             "limit": false,
             "occupation": 3,
-            "organization": 0
+            "organization": 31
         },
         "281_popukar": {
             "name": {
@@ -957,7 +957,7 @@
             "stars": 3,
             "limit": false,
             "occupation": 2,
-            "organization": 0
+            "organization": 32
         },
         "282_catapult": {
             "name": {
@@ -967,7 +967,7 @@
             "stars": 3,
             "limit": false,
             "occupation": 3,
-            "organization": 0
+            "organization": 32
         },
         "283_midnight": {
             "name": {
@@ -977,7 +977,7 @@
             "stars": 3,
             "limit": false,
             "occupation": 2,
-            "organization": 0
+            "organization": 32
         },
         "284_spot": {
             "name": {
@@ -987,7 +987,7 @@
             "stars": 3,
             "limit": false,
             "occupation": 4,
-            "organization": 0
+            "organization": 32
         },
         "289_matoimaru": {
             "name": {
@@ -1057,7 +1057,7 @@
             "stars": 4,
             "limit": false,
             "occupation": 3,
-            "organization": 0
+            "organization": 31
         },
         "306_leizi": {
             "name": {
@@ -1117,7 +1117,7 @@
             "stars": 6,
             "limit": false,
             "occupation": 3,
-            "organization": 0
+            "organization": 31
         },
         "337_utage": {
             "name": {
@@ -1137,7 +1137,7 @@
             "stars": 5,
             "limit": false,
             "occupation": 7,
-            "organization": 0
+            "organization": 29
         },
         "340_schwarz": {
             "name": {
@@ -1229,6 +1229,16 @@
             "occupation": 6,
             "organization": 222
         },
+        "362_saga": {
+            "name": {
+                "en": "Saga",
+                "zh": "嵯峨"
+            },
+            "stars": 6,
+            "limit": false,
+            "occupation": 1,
+            "organization": 10
+        },
         "365_april": {
             "name": {
                 "en": "April",
@@ -1307,7 +1317,7 @@
             "stars": 6,
             "limit": true,
             "occupation": 3,
-            "organization": 0
+            "organization": 30
         },
         "400_weedy": {
             "name": {
@@ -1389,6 +1399,16 @@
             "occupation": 1,
             "organization": 7
         },
+        "455_nothing": {
+            "name": {
+                "en": "Mr. Nothing",
+                "zh": "乌有"
+            },
+            "stars": 5,
+            "limit": false,
+            "occupation": 8,
+            "organization": 25
+        },
         "2013_ceobe": {
             "name": {
                 "en": "Ceobe",
@@ -1407,7 +1427,17 @@
             "stars": 6,
             "limit": true,
             "occupation": 4,
-            "organization": 0
+            "organization": 27
+        },
+        "2015_dusk": {
+            "name": {
+                "en": "Dusk",
+                "zh": "夕"
+            },
+            "stars": 6,
+            "limit": true,
+            "occupation":7,
+            "organization": 27
         },
         "294_ayerscarpe": {
             "name": {
@@ -1564,6 +1594,38 @@
         "25": {
             "name": "炎",
             "icon_name": "yan"
+        },
+        "26": {
+            "name": "巴别塔",
+            "icon_name": "babel"
+        },
+        "27": {
+            "name": "岁",
+            "icon_name": "sui"
+        },
+        "28": {
+            "name": "S.W.E.E.p",
+            "icon_name": "sweep"
+        },
+        "29": {
+            "name": "维多利亚",
+            "icon_name": "victoria"
+        },
+        "30": {
+            "name": "罗德岛精英干员",
+            "icon_name": "op_team_EQ"
+        },
+        "31": {
+            "name": "拉特兰",
+            "icon_name": "lateranensi"
+        },
+        "32": {
+            "name": "行动预备组A6",
+            "icon_name": "reop_team_a6"
+        },
+        "33": {
+            "name": "鲤氏事务所",
+            "icon_name": "li"
         },
         "": {
             "name": "",
