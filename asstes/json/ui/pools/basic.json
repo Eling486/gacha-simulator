@@ -1,5 +1,5 @@
 {
-    "preload":{
+    "preload": {
         "basic_bg": {
             "x": 50,
             "y": 70,
@@ -7,7 +7,7 @@
             "scale_y": 1.5
         }
     },
-    "position":{
+    "position": {
         "details_box": {
             "x": 23,
             "y": 95.5,
@@ -51,7 +51,69 @@
             "scale_y": 1.08
         }
     },
-    "text":{
-        
+    "text": {
+        "txt_once": {
+            "content": "寻访一次",
+            "style": {
+                "fontFamily": "Notosanshans-Medium",
+                "fontSize": 30,
+                "fontWeight": "500",
+                "lineHeight": 30,
+                "fill": "0x111111"
+            },
+            "position": {
+                "x": 73,
+                "y": 98,
+                "scale_x": 1,
+                "scale_y": 1
+            }
+        },
+        "txt_ten_times": {
+            "content": "寻访十次",
+            "style": {
+                "fontFamily": "Notosanshans-Medium",
+                "fontSize": 30,
+                "lineHeight": 30,
+                "fill": "0x111111"
+            },
+            "position": {
+                "x": 91.5,
+                "y": 98,
+                "scale_x": 1,
+                "scale_y": 1
+            }
+        },
+        "txt_voucher_once": {
+            "content": "x1",
+            "style": {
+                "fontFamily": "Notosanshans-Medium",
+                "fontSize": 22,
+                "fontWeight": "500",
+                "lineHeight": 30,
+                "fill": "0xffffff"
+            },
+            "position": {
+                "x": 71.5,
+                "y": 89.5,
+                "scale_x": 1,
+                "scale_y": 1
+            }
+        },
+        "txt_voucher_ten_times": {
+            "content": "x1",
+            "style": {
+                "fontFamily": "Notosanshans-Medium",
+                "fontSize": 22,
+                "fontWeight": "500",
+                "lineHeight": 30,
+                "fill": "0xffffff"
+            },
+            "position": {
+                "x": 89.3,
+                "y": 89.5,
+                "scale_x": 1,
+                "scale_y": 1
+            }
+        }
     }
 }
