@@ -1,0 +1,248 @@
+{   
+    "preload": {
+        "bg_char": {
+            "x": 50,
+            "y": 55,
+            "scale_x": 1.3,
+            "scale_y": 1.3
+        },
+        "mg": {
+            "x": 60,
+            "y": 45,
+            "alpha": 0.9,
+            "scale_x": 1.7,
+            "scale_y": 1.6
+        },
+        "mg_2": {
+            "x": 50,
+            "y": 55,
+            "scale_x": 1.3,
+            "scale_y": 1.3
+        }
+    },
+    "char_any":{
+        "char_any": {
+            "x": 56,
+            "y": 70,
+            "scale_x": 0.8,
+            "scale_y": 0.8
+        }
+    },
+    "position": {
+        "s_1": {
+            "x": 50,
+            "y": 20,
+            "scale_x": 0.5,
+            "scale_y": 0.5,
+            "rotation": 0.5,
+            "alpha": 0.5,
+            "ani_type": "fadeLoop",
+            "time": 4,
+            "delay_time": 1,
+            "tint": "0xffc107"
+        },
+        "s_201": {
+            "x": 40,
+            "y": 20,
+            "scale_x": 0.5,
+            "scale_y": 0.5,
+            "rotation": 0.5,
+            "alpha": 1,
+            "ani_type": "fadeLoop",
+            "time": 8,
+            "delay_time": 4,
+            "tint": "0xffffff"
+        }
+    },
+    "effect1": {
+        "s_201": {
+            "x": 102,
+            "y": 50,
+            "scale_x": 0.45,
+            "scale_y": 0.45,
+            "rotation": 0.5,
+            "tint": "0xffffff"
+        },
+        "s_202": {
+            "x": 90,
+            "y": 50,
+            "scale_x": 0.4,
+            "scale_y": 0.4,
+            "rotation": 0.5,
+            "tint": "0xffffff"
+        },
+        "s_203": {
+            "x": 104,
+            "y": 62,
+            "scale_x": 0.15,
+            "scale_y": 0.15,
+            "rotation": 0.5,
+            "tint": "0xffffff"
+        },
+        "s_204": {
+            "x": 6,
+            "y": 83,
+            "scale_x": 0.42,
+            "scale_y": 0.42,
+            "rotation": 0.5,
+            "tint": "0xffffff"
+        },
+        "s_205": {
+            "x": 8,
+            "y": 73,
+            "scale_x": 0.16,
+            "scale_y": 0.16,
+            "rotation": 0.5,
+            "tint": "0xffffff"
+        },
+        "s_206": {
+            "x": 20,
+            "y": 75,
+            "scale_x": 0.16,
+            "scale_y": 0.16,
+            "rotation": 0.5,
+            "tint": "0xffffff"
+        }
+    },
+    "effect2": {
+        "s_1": {
+            "x": 110,
+            "y": 20,
+            "scale_x": 0.5,
+            "scale_y": 0.5,
+            "rotation": 0.5,
+            "alpha": 0.5,
+            "ani_type": "slide scale fadeOut",
+            "end_x": 10,
+            "end_y": 20,
+            "end_scale_x": 0.2,
+            "end_scale_y": 0.2,
+            "time": 6,
+            "before_fade_time": 4.5,
+            "before_scale_time": 4.5,
+            "tint": "0xffc107"
+        },
+        "s_201": {
+            "x": 30,
+            "y": 67,
+            "scale_x": 0.4,
+            "scale_y": 0.4,
+            "rotation": 0.5,
+            "ani_type": "fadeOut",
+            "before_fade_time": 1,
+            "time": 2
+        },
+        "s_102": {
+            "x": 50,
+            "y": 37,
+            "scale_x": 1,
+            "scale_y": 1,
+            "ani_type": "slide scale fadeOut",
+            "end_x": 20,
+            "end_y": 37,
+            "end_scale_x": 0.2,
+            "end_scale_y": 0.2,
+            "time": 2,
+            "before_fade_time": 1,
+            "easing_type": "linear"
+        }
+    },
+    "stars":{
+        "star01":{
+            "x": 60,
+            "y": 80,
+            "scale_x": 0,
+            "scale_y": 0,
+            "rotation": 0,
+            "alpha": 1
+        },
+        "star02":{
+            "x": 53,
+            "y": 80,
+            "scale_x": 0,
+            "scale_y": 0,
+            "rotation": 0,
+            "alpha": 1
+        },
+        "star03":{
+            "x": 46,
+            "y": 80,
+            "scale_x": 0,
+            "scale_y": 0,
+            "rotation": 0,
+            "alpha": 1
+        },
+        "star04":{
+            "x": 39,
+            "y": 80,
+            "scale_x": 0,
+            "scale_y": 0,
+            "rotation": 0,
+            "alpha": 1
+        },
+        "star05":{
+            "x": 67,
+            "y": 80,
+            "scale_x": 0,
+            "scale_y": 0,
+            "rotation": 0,
+            "alpha": 1
+        },
+        "star06":{
+            "x": 74,
+            "y": 80,
+            "scale_x": 0,
+            "scale_y": 0,
+            "rotation": 0,
+            "alpha": 1
+        }
+    },
+    "effect_stars":[
+        {
+            "x": 60,
+            "y": 80
+        },
+        {
+            "x": 53,
+            "y": 80
+        },
+        {
+            "x": 46,
+            "y": 80
+        },
+        {
+            "x": 39,
+            "y": 80
+        },
+        {
+            "x": 67,
+            "y": 80
+        },
+        {
+            "x": 74,
+            "y": 80
+        }
+    ],
+    "mask":{
+        "mask_r_1": {
+            "x": 75,
+            "y": 90,
+            "scale_x": 2,
+            "scale_y": 2,
+            "alpha": 0
+        },
+        "shanshuo_1": {
+            "x": 50,
+            "y": 50,
+            "x_2": 20,
+            "y_2": 20,
+            "scale_x": 6,
+            "scale_y": 6,
+            "alpha": 0.9,
+            "ani_type": "slide",
+            "end_x": 50,
+            "end_y": 60,
+            "time": 0.1
+        }
+    }
+}

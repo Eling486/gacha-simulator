@@ -1,6 +1,7 @@
 {
     "characters": {
         "010_chen": {
+            "id": "010_chen",
             "name": {
                 "en": "Ch'en",
                 "zh": "陈"
@@ -11,6 +12,7 @@
             "organization": 2
         },
         "017_blaze": {
+            "id": "017_blaze",
             "name": {
                 "en": "Blaze",
                 "zh": "煌"
@@ -21,6 +23,7 @@
             "organization": 1
         },
         "101_sora": {
+            "id": "101_sora",
             "name": {
                 "en": "Sora",
                 "zh": "空"
@@ -31,6 +34,7 @@
             "organization": 3
         },
         "102_texas": {
+            "id": "102_texas",
             "name": {
                 "en": "Texas",
                 "zh": "德克萨斯"
@@ -41,6 +45,7 @@
             "organization": 3
         },
         "103_exusiai": {
+            "id": "103_exusiai",
             "name": {
                 "en": "Exusiai",
                 "zh": "能天使"
@@ -51,6 +56,7 @@
             "organization": 3
         },
         "106_franka": {
+            "id": "106_franka",
             "name": {
                 "en": "Franka",
                 "zh": "芙兰卡"
@@ -61,6 +67,7 @@
             "organization": 4
         },
         "107_liskarm": {
+            "id": "107_liskarm",
             "name": {
                 "en": "Liskarm",
                 "zh": "雷蛇"
@@ -71,6 +78,7 @@
             "organization": 4
         },
         "108_silence": {
+            "id": "108_silence",
             "name": {
                 "en": "Silence",
                 "zh": "赫默"
@@ -81,6 +89,7 @@
             "organization": 5
         },
         "109_gitano": {
+            "id": "109_gitano",
             "name": {
                 "en": "Gitano",
                 "zh": "远山"
@@ -91,6 +100,7 @@
             "organization": 19
         },
         "110_deepcolor": {
+            "id": "110_deepcolor",
             "name": {
                 "en": "Deepcolor",
                 "zh": "深海色"
@@ -99,7 +109,9 @@
             "limit": false,
             "occupation": 6,
             "organization": 1
-        },"112_siege": {
+        },
+        "112_siege": {
+            "id": "112_siege",
             "name": {
                 "en": "Siege",
                 "zh": "推进之王"
@@ -110,6 +122,7 @@
             "organization": 9
         },
         "113_cqbw": {
+            "id": "113_cqbw",
             "name": {
                 "en": "W",
                 "zh": "W"
@@ -120,6 +133,7 @@
             "organization": 26
         },
         "115_lindong": {
+            "id": "115_lindong",
             "name": {
                 "en": "Зима",
                 "zh": "凛冬"
@@ -130,6 +144,7 @@
             "organization": 24
         },
         "117_myrrh": {
+            "id": "117_myrrh",
             "name": {
                 "en": "Myrrh",
                 "zh": "末药"
@@ -140,6 +155,7 @@
             "organization": 1
         },
         "118_yuki": {
+            "id": "118_yuki",
             "name": {
                 "en": "ShiraYuki",
                 "zh": "白雪"
@@ -150,6 +166,7 @@
             "organization": 10
         },
         "120_hibiscus": {
+            "id": "120_hibiscus",
             "name": {
                 "en": "Hibiscus",
                 "zh": "芙蓉"
@@ -160,6 +177,7 @@
             "organization": 16
         },
         "121_lava": {
+            "id": "121_lava",
             "name": {
                 "en": "Lava",
                 "zh": "炎熔"
@@ -170,6 +188,7 @@
             "organization": 16
         },
         "122_beagle": {
+            "id":"122_beagle",
             "name": {
                 "en": "Beagle",
                 "zh": "米格鲁"
@@ -180,6 +199,7 @@
             "organization": 16
         },
         "123_fang": {
+            "id":"123_fang",
             "name": {
                 "en": "Fang",
                 "zh": "芬"
@@ -190,6 +210,7 @@
             "organization": 16
         },
         "124_kroos": {
+            "id":"124_kroos",
             "name": {
                 "en": "Kroos",
                 "zh": "克洛斯"
@@ -200,6 +221,7 @@
             "organization": 16
         },
         "126_meteor": {
+            "id":"126_meteor",
             "name": {
                 "en": "Meteor",
                 "zh": "流星"
@@ -210,6 +232,7 @@
             "organization": 12
         },
         "128_ptilopsis": {
+            "id":"128_ptilopsis",
             "name": {
                 "en": "Ptilopsis",
                 "zh": "白面鸮"
@@ -220,6 +243,7 @@
             "organization": 5
         },
         "129_bluep": {
+            "id":"129_bluep",
             "name": {
                 "en": "Blue Poison",
                 "zh": "蓝毒"
@@ -230,6 +254,7 @@
             "organization": 1
         },
         "130_doberman": {
+            "id":"130_doberman",
             "name": {
                 "en": "Doberman",
                 "zh": "杜宾"
@@ -240,6 +265,7 @@
             "organization": 1
         },
         "133_may": {
+            "id":"133_may",
             "name": {
                 "en": "May",
                 "zh": "梅"
@@ -250,6 +276,7 @@
             "organization": 0
         },
         "134_ifrit": {
+            "id": "134_ifrit",
             "name": {
                 "en": "Ifrit",
                 "zh": "伊芙利特"
@@ -260,6 +287,7 @@
             "organization": 5
         },
         "136_hoshiguma": {
+            "id":"136_hoshiguma",
             "name": {
                 "en": "Hoshiguma",
                 "zh": "星熊"
@@ -270,6 +298,7 @@
             "organization": 2
         },
         "137_beehunter": {
+            "id":"137_beehunter",
             "name": {
                 "en": "Beehunter",
                 "zh": "猎蜂"
@@ -280,6 +309,7 @@
             "organization": 23
         },
         "140_lappland": {
+            "id":"140_lappland",
             "name": {
                 "en": "Lappland",
                 "zh": "拉普兰德"
@@ -290,6 +320,7 @@
             "organization": 22
         },
         "141_haze": {
+            "id":"141_haze",
             "name": {
                 "en": "Haze",
                 "zh": "夜烟"
@@ -300,6 +331,7 @@
             "organization": 29
         },
         "143_specter": {
+            "id":"143_specter",
             "name": {
                 "en": "Specter",
                 "zh": "幽灵鲨"
@@ -310,6 +342,7 @@
             "organization": 6
         },
         "144_red": {
+            "id":"143_specter",
             "name": {
                 "en": "Projekt Red",
                 "zh": "红"
@@ -320,6 +353,7 @@
             "organization": 28
         },
         "145_provence": {
+            "id":"145_provence",
             "name": {
                 "en": "Provence",
                 "zh": "普罗旺斯"
@@ -330,6 +364,7 @@
             "organization": 22
         },
         "147_shining": {
+            "id":"147_shining",
             "name": {
                 "en": "Shining",
                 "zh": "闪灵"
@@ -340,6 +375,7 @@
             "organization": 8
         },
         "148_nearl": {
+            "id":"148_nearl",
             "name": {
                 "en": "Nearl",
                 "zh": "临光"
@@ -350,6 +386,7 @@
             "organization": 8
         },
         "149_scavenger": {
+            "id":"149_scavenger",
             "name": {
                 "en": "Scavenger",
                 "zh": "清道夫"
@@ -360,6 +397,7 @@
             "organization": 28
         },
         "150_cuora": {
+            "id":"150_cuora",
             "name": {
                 "en": "Cuora",
                 "zh": "蛇屠箱"
@@ -1067,7 +1105,7 @@
             "stars": 5,
             "limit": false,
             "occupation": 7,
-            "organization": 25 
+            "organization": 25
         },
         "308_swire": {
             "name": {
@@ -1436,7 +1474,7 @@
             },
             "stars": 6,
             "limit": true,
-            "occupation":7,
+            "occupation": 7,
             "organization": 27
         },
         "294_ayerscarpe": {
