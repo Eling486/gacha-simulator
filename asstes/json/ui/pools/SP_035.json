@@ -1,14 +1,4 @@
 {
-    "resources": [
-        {
-            "name": "basic_ui",
-            "url": "asstes/img/pools/basic.json"
-        },
-        {
-            "name": "pool_ui",
-            "url": "asstes/img/pools/SP_035.json"
-        }
-    ],
     "position": {
         "bg": {
             "x": 50,
