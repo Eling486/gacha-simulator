@@ -56,7 +56,7 @@
         <key>jxrCompressionLevel</key>
         <uint>0</uint>
         <key>ditherType</key>
-        <enum type="SettingsBase::DitherType">NearestNeighbour</enum>
+        <enum type="SettingsBase::DitherType">PngQuantLow</enum>
         <key>backgroundColor</key>
         <uint>0</uint>
         <key>libGdx</key>
@@ -250,9 +250,9 @@
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>256,256,512,512</rect>
+                <rect>100,234,201,468</rect>
                 <key>scale9Paddings</key>
-                <rect>256,256,512,512</rect>
+                <rect>100,234,201,468</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
@@ -291,7 +291,6 @@
             </struct>
             <key type="filename">guangxiao_2.png</key>
             <key type="filename">guangxiao_5.png</key>
-            <key type="filename">mg.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -321,42 +320,12 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">medic_b.png</key>
+            <key type="filename">mask_r_1.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
                 <key>spriteScale</key>
-                <double>1</double>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>47,20,93,39</rect>
-                <key>scale9Paddings</key>
-                <rect>47,20,93,39</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">new.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
-                <key>spriteScale</key>
-                <double>1</double>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>26,9,53,17</rect>
-                <key>scale9Paddings</key>
-                <rect>26,9,53,17</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">patrt_06.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
-                <key>spriteScale</key>
-                <double>1</double>
+                <double>0.9</double>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
@@ -366,6 +335,7 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
+            <key type="filename">mask_r_2.png</key>
             <key type="filename">s_1.png</key>
             <key type="filename">s_2.png</key>
             <key type="filename">shanshuo_1.png</key>
@@ -381,6 +351,81 @@
                 <rect>32,32,64,64</rect>
                 <key>scale9Paddings</key>
                 <rect>32,32,64,64</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">mask_s.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>16,16,32,32</rect>
+                <key>scale9Paddings</key>
+                <rect>16,16,32,32</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">medic_b.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>47,20,93,39</rect>
+                <key>scale9Paddings</key>
+                <rect>47,20,93,39</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">mg.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>106,94,213,188</rect>
+                <key>scale9Paddings</key>
+                <rect>106,94,213,188</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">mg_2.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>256,145,512,289</rect>
+                <key>scale9Paddings</key>
+                <rect>256,145,512,289</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">new.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>26,9,53,17</rect>
+                <key>scale9Paddings</key>
+                <rect>26,9,53,17</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
@@ -461,8 +506,8 @@
             <filename>guard_b.png</filename>
             <filename>medic_b.png</filename>
             <filename>mg.png</filename>
+            <filename>mg_2.png</filename>
             <filename>new.png</filename>
-            <filename>patrt_06.png</filename>
             <filename>s_1.png</filename>
             <filename>s_2.png</filename>
             <filename>shanshuo_1.png</filename>
@@ -472,6 +517,9 @@
             <filename>star.png</filename>
             <filename>supporter_b.png</filename>
             <filename>vanguard_b.png</filename>
+            <filename>mask_s.png</filename>
+            <filename>mask_r_1.png</filename>
+            <filename>mask_r_2.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

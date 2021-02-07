@@ -122,16 +122,6 @@
             "before_scale_time": 4.5,
             "tint": "0xffc107"
         },
-        "s_201": {
-            "x": 30,
-            "y": 67,
-            "scale_x": 0.4,
-            "scale_y": 0.4,
-            "rotation": 0.5,
-            "ani_type": "fadeOut",
-            "before_fade_time": 1,
-            "time": 2
-        },
         "s_102": {
             "x": 50,
             "y": 37,
@@ -195,6 +185,32 @@
             "scale_y": 0,
             "rotation": 0,
             "alpha": 1
+        }
+    },
+    "stars_2":{
+        "star01":{
+            "x": 46,
+            "y": 78
+        },
+        "star02":{
+            "x": 53,
+            "y": 78
+        },
+        "star03":{
+            "x": 60,
+            "y": 78
+        },
+        "star04":{
+            "x": 67,
+            "y": 78
+        },
+        "star05":{
+            "x": 74,
+            "y": 78
+        },
+        "star06":{
+            "x": 81,
+            "y": 78
         }
     },
     "effect_stars":[

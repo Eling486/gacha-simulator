@@ -1,41 +1,11 @@
-function loadJson(path){
-    return new Promise(resolve => {
-        var request = new XMLHttpRequest();
-        request.open("get", path);
-        request.send(null);
-        request.onload = function () {
-            if (request.status == 200) {
-                resolve(JSON.parse(request.responseText))
-            }
-        }
-    })
-}
-
-function resetStatistics() {
-    window.gacha_times = 0
-    window.real_gacha_times = 0
-    window.gacha_result = []
-    window.last_six_star = 0
-    window.six_num = 0
-    window.five_num = 0
-    window.four_num = 0
-    window.three_num = 0
-}
-
-window.onload = async function () {
-    window.pools_json = await loadJson('./asstes/json/pools.json')
-    window.pool_id = window.pools_json.default
-    resetStatistics()
-    window.chars_json = await loadJson('./asstes/json/characters.json')
-    loadGachaPage()
-}
-
 function gachaOnce() {
     var char_id = gacha()
     var gacha_result = []
     var char_obj = window.chars_json.characters[char_id]
     gacha_result.push(char_obj)
-    window.gacha_result.push(gacha_result)
+    window.last_gacha_result = gacha_result
+    window.gacha_results.push(gacha_result)
+    return gacha_result
 }
 
 function gachaTenTimes() {
@@ -50,7 +20,9 @@ function gachaTenTimes() {
         var char_obj = window.chars_json.characters[gacha_char_id]
         gacha_result.push(char_obj)
     }
-    window.gacha_result.push(gacha_result)
+    window.last_gacha_result = gacha_result
+    window.gacha_results.push(gacha_result)
+    return gacha_result
 }
 
 function gacha() {
