@@ -253,10 +253,10 @@
             "occupation": 3,
             "organization": 1
         },
-        "130_doberman": {
-            "id":"130_doberman",
+        "130_dobermann": {
+            "id":"130_dobermann",
             "name": {
-                "en": "Doberman",
+                "en": "Dobermann",
                 "zh": "杜宾"
             },
             "stars": 4,
@@ -847,10 +847,10 @@
             "occupation": 8,
             "organization": 12
         },
-        "240_vanila": {
-            "id":"240_vanila",
+        "240_vanilla": {
+            "id":"240_vanilla",
             "name": {
-                "en": "Vanila",
+                "en": "Vanilla",
                 "zh": "香草"
             },
             "stars": 3,

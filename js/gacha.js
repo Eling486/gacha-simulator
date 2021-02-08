@@ -121,8 +121,9 @@ function gacha() {
                     }
                 }
             }
-            var random_char2 = getRandom(1, char_arr.length)
-            result_char = char_arr[random_char2 - 1]
+            var random_char2 = getRandom(0, char_arr.length - 1)
+            result_char = char_arr[random_char2]
+            // console.log('weight up', random_char2, char_arr)
         }
     } else {
         var char_arr = pool_json.content[result_star]
@@ -133,8 +134,9 @@ function gacha() {
                 }
             }
         }
-        var random_char2 = getRandom(1, char_arr.length)
-        var result_char = char_arr[random_char2 - 1]
+        var random_char2 = getRandom(0, char_arr.length - 1)
+        var result_char = char_arr[random_char2]
+        // console.log('rate up', random_char2, char_arr)
     }
     return result_char // 返回寻访到的干员id
 }

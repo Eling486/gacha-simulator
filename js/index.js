@@ -238,13 +238,23 @@ function gachaConfirm(type) {
     result = gachaOnce()
     app.stage.children = []
     sprites_on_stage = []
-    console.log(result[0].id)
+    /*
+    let char_id = '136_hoshiguma' // 调试用
+    let gacha_result = []
+    let char_obj = window.chars_json.characters[char_id]
+    gacha_result.push(char_obj)
+    result = gacha_result
+    */
+    // console.log(result)
     if (!loader.resources[result[0].id.split('_')[1]]) {
+      console.log('need load')
       loader
-        .add(result[0].id.split('_')[1], `./asstes/characters/standing/${result[0].id}.png`)
+        .add(result[0].id.split('_')[1], `https://eling486.github.io/gacha-simulator/asstes/characters/standing/${result[0].id}.png`)
         //.add('sora', `./asstes/characters/standing/101_sora.png`)
-        .load(showGachaResult(result));
+        .onLoad.add(function(){showGachaResult(result)});
     } else {
+      console.log('exist')
+      app.stage.children = []
       showGachaResult(result)
     }
   }
@@ -256,6 +266,7 @@ function gachaConfirm(type) {
 }
 
 async function showGachaResult(result) {
+  app.stage.children = []
   single_ui_data = await loadJson(`./asstes/json/ui/single.json`)
   UI_single = loader.resources['single_ui'].textures;
   if (result.length == 1) {
@@ -336,8 +347,10 @@ async function showGachaResult(result) {
             c.slide(star0${i}, grid_w * ${_position[`star0${i}`].x + 25} - star0${i}.width / 2, grid_h * ${_position[`star0${i}`].y} - star0${i}.height / 2, 60 * 20, 'linear');
           }`)
         }
-        app.stage.on("pointertap", function () {
+        app.stage.on('pointertap', function () {
+          console.log
           app.stage.children = []
+          app.stage._events = {}
           loadGachaPage()
         })
       })
