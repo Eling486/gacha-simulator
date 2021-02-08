@@ -13,10 +13,13 @@ PIXI.settings.SORTABLE_CHILDREN = true
 let c = new Charm(PIXI);
 let d = new Dust(PIXI);
 
-let app, bg, grid_w, grid_h, pool_ui_data, basic_pool_ui_data, single_ui_data, starContainer
+let app, bg, grid_w, grid_h, basic_ui_data, pool_ui_data, basic_pool_ui_data, single_ui_data, starContainer
 let sprites_on_stage = [],
   single_effect_sprites = []
 let UI_single, UI_pool_basic, UI_pool
+
+let poolPage = new Container(),
+  singlePage = new Container()
 
 function loadJson(path) {
   return new Promise(resolve => {
@@ -83,18 +86,18 @@ function updatePageSize() {
   }*/
 }
 
-function addSprite(ui_data, index, UI_res) {
+function addSprite(ui_data, index, UI_res, container = 'app.stage') {
   let _position = ui_data[index] // 下行用'0'分割字符串是用来进行相同纹理的元素区分的
   sprites_on_stage.push(index)
   let _add = `${index} = new Sprite(${UI_res}["${index.split('0')[0]}.png"]);
-        app.stage.addChild(${index});
+        ${container}.addChild(${index});
         ${index}.scale.set(${_position.scale_x}, ${_position.scale_y});
         ${index}.position.set(grid_w * ${_position.x} - ${index}.width / 2, grid_h * ${_position.y} - ${index}.height / 2)`;
   window.eval(_add)
 }
 
-function addSpriteWithAni(ui_data, index, UI_res, type = 'normal') {
-  addSprite(ui_data, index, UI_res)
+function addSpriteWithAni(ui_data, index, UI_res, container = 'app.stage', type = 'normal') {
+  addSprite(ui_data, index, UI_res, container)
   if (type == 'effect') {
     single_effect_sprites.push(index)
   }
@@ -129,18 +132,19 @@ function addSpriteWithAni(ui_data, index, UI_res, type = 'normal') {
   }
 }
 
-function addText(text_data, index) {
+function addText(text_data, index, container = 'app.stage') {
   let _position = text_data[index].position
   sprites_on_stage.push(index)
   let _add = `let ${index}_style = new TextStyle(${JSON.stringify(text_data[index].style)});
         ${index} = new Text(${JSON.stringify(text_data[index].content)}, ${index}_style);
-        app.stage.addChild(${index});
+        ${container}.addChild(${index});
         ${index}.scale.set(${_position.scale_x}, ${_position.scale_y});
         ${index}.position.set(grid_w * ${_position.x} - ${index}.width / 2, grid_h * ${_position.y} - ${index}.height / 2)`;
   window.eval(_add)
 }
 
 async function loadGachaPage() {
+  basic_ui_data = await loadJson('./asstes/json/ui/basic.json')
   basic_pool_ui_data = await loadJson('./asstes/json/ui/pools/basic.json')
   pool_ui_data = await loadJson(`./asstes/json/ui/pools/${window.pool_id}.json`)
   updatePageSize()
@@ -167,12 +171,21 @@ async function loadGachaPage() {
     "lineHeight": 10,
     "fill": "white"
   });
+  let font_load_style_3 = new TextStyle({
+    "fontFamily": "Notosanshans",
+    "fontSize": 10,
+    "lineHeight": 10,
+    "fill": "white"
+  });
   load_font_1 = new Text('Load Font', font_load_style_1);
   load_font_2 = new Text('Load Font', font_load_style_2);
+  load_font_3 = new Text('Load Font', font_load_style_3);
   load_font_1.alpha = 0.01
   load_font_2.alpha = 0.01
+  load_font_3.alpha = 0.01
   app.stage.addChild(load_font_1);
   app.stage.addChild(load_font_2);
+  app.stage.addChild(load_font_3);
   loadGachaPageRes();
 }
 
@@ -181,54 +194,127 @@ function loadGachaPageRes() {
     loader
       //.add(resources_json.online_resources)
       .add(resources_json.resources)
-      //.add("pool_ui", `https://eling-1258601402.file.myqcloud.com/gacha-simulator/asstes/img/pools/${window.pool_id}.json`)
-      .add("pool_ui", `./asstes/img/pools/${window.pool_id}.json`)
-      .load(setup);
+      .load(loadPoolRes);
   } else {
-    setup()
+    loadPoolRes()
+  }
+
+  function loadPoolRes() {
+    if (!loader.resources[`${window.pool_id}`]) {
+      loader
+        //.add(`${window.pool_id}`, `https://eling-1258601402.file.myqcloud.com/gacha-simulator/asstes/img/pools/${window.pool_id}.json`)
+        .add(`${window.pool_id}`, `./asstes/img/pools/${window.pool_id}.json`)
+        .load(setup);
+    } else {
+      setup()
+    }
   }
 
   function setup() {
     window.first_load = false
-    UI_pool = loader.resources['pool_ui'].textures;
+    UI_basic = loader.resources['basic_ui'].textures;
+    UI_pool = loader.resources[`${window.pool_id}`].textures;
     UI_pool_basic = loader.resources['basic_pool_ui'].textures;
 
     // return showGachaResult() //调试用
 
     // 背景元素提前加载
     for (index in basic_pool_ui_data.preload) {
-      addSprite(basic_pool_ui_data.preload, index, 'UI_pool_basic')
+      addSprite(basic_pool_ui_data.preload, index, 'UI_pool_basic', 'poolPage')
     }
 
     for (index in pool_ui_data.position) {
-      addSprite(pool_ui_data.position, index, 'UI_pool')
+      addSprite(pool_ui_data.position, index, 'UI_pool', 'poolPage')
     }
 
     for (index in basic_pool_ui_data.position) {
-      addSprite(basic_pool_ui_data.position, index, 'UI_pool_basic')
+      addSprite(basic_pool_ui_data.position, index, 'UI_pool_basic', 'poolPage')
     }
 
     details_box.alpha = 0.5 // 为详情框设置不透明度
 
     if (pool_ui_data.add_from_basic) {
       for (index in pool_ui_data.add_from_basic) {
-        addSprite(pool_ui_data.add_from_basic, index, 'UI_pool_basic')
+        addSprite(pool_ui_data.add_from_basic, index, 'UI_pool_basic', 'poolPage')
       }
     }
 
     for (index in basic_pool_ui_data.text) {
-      addText(basic_pool_ui_data.text, index)
+      addText(basic_pool_ui_data.text, index, 'poolPage')
     }
 
     if (pool_ui_data.text) {
       for (index in pool_ui_data.text) {
-        addText(pool_ui_data.text, index)
+        addText(pool_ui_data.text, index, 'poolPage')
       }
     }
     if (window.gacha_times >= 10 || window.six_num > 0 || window.five_num > 0) {
       tentimes_up.alpha = 0
       tentimes_up_text.alpha = 0
     }
+
+    let pools_index
+    for (let i = 0; i < window.pools_json.pools.length; i++) {
+      if (window.pools_json.pools[i].id == window.pool_id) {
+        pools_index = i
+        break;
+      }
+    }
+
+    if (tentimes_up.alpha > 0) {
+      let num_style = new TextStyle({
+        fontFamily: "Notosanshans-Medium",
+        fontSize: 30,
+        lineHeight: 30,
+        fill: "#ffeb00",
+        stroke: '#000000',
+        strokeThickness: 2,
+        dropShadow: false,
+        dropShadowColor: "#000000",
+        dropShadowBlur: 4,
+        dropShadowAngle: 0,
+        dropShadowDistance: 0
+      });
+      up_num = new Text(`${10 - window.real_gacha_times}`, num_style);
+      up_num.anchor.set(0.5, 0.5)
+      up_num.position.set(grid_w * 67, grid_h * 79.7);
+      poolPage.addChild(up_num);
+    }
+    /*
+    let filter;
+    filter = new PIXI.Filter(null, null, {
+      customUniform: 0.0,
+  });*/
+    // poolPage.filters = [filter];
+    poolPage.alpha = 0
+    app.stage.addChild(poolPage)
+    app.ticker.add(() => {
+      if (poolPage.alpha + 0.08 >= 1) {
+        poolPage.alpha = 1
+      } else {
+        poolPage.alpha += 0.08
+      }
+    });
+
+
+    if (window.pools_json.pools[pools_index - 1]) {
+      addSpriteWithAni(basic_ui_data.arrows, 'arrow_white01', 'UI_basic', 'app.stage')
+      arrow_white01.interactive = true;
+      arrow_white01.buttonMode = true;
+      arrow_white01.on('pointertap', function () {
+        switchPool(pools_index - 1)
+      })
+    }
+
+    if (window.pools_json.pools[pools_index + 1]) {
+      addSpriteWithAni(basic_ui_data.arrows, 'arrow_white02', 'UI_basic', 'app.stage')
+      arrow_white02.interactive = true;
+      arrow_white02.buttonMode = true;
+      arrow_white02.on('pointertap', function () {
+        switchPool(pools_index + 1)
+      })
+    }
+
     btn_once.interactive = true;
     btn_once.buttonMode = true
     btn_once.on('pointerdown', function () {
@@ -255,6 +341,14 @@ function loadGachaPageRes() {
       btn_ten_times.tint = 0xFFFFFF
     })
   }
+}
+
+function switchPool(index) {
+  resetStatistics()
+  window.pool_id = window.pools_json.pools[index].id
+  console.log(window.pool_id)
+  app.stage.children = []
+  loadGachaPage()
 }
 
 function gachaConfirm(type) {
@@ -289,7 +383,7 @@ function gachaConfirm(type) {
   }
 }
 
-function loadOrganization(){
+function loadOrganization() {
   let result = window.last_gacha_result
   if (!loader.resources[window.chars_json.organizations[result[0].organization].icon_name]) {
     loader
@@ -322,7 +416,7 @@ async function showGachaResult() {
       addSpriteWithAni(single_ui_data.effect2, index, 'UI_single')
       eval(`${index}.blendMode = PIXI.BLEND_MODES.HARD_LIGHT;`)
     }
-    s_1.blendMode = PIXI.BLEND_MODES.SATURATION;
+
     starContainer = new PIXI.ParticleContainer(1500, { alpha: true, scale: true, rotation: true, uvs: true });
     app.stage.addChild(starContainer);
 
@@ -396,7 +490,7 @@ async function showGachaResult() {
             c.slide(star0${i}, grid_w * ${_position[`star0${i}`].x + 25} - star0${i}.width / 2, grid_h * ${_position[`star0${i}`].y} - star0${i}.height / 2, 60 * 20, 'linear');
           }`)
         }
-        
+
         let occupation = window.chars_json.occupation[result[0].occupation].icon_name
         occupation_img = new Sprite(UI_single[`${occupation}_b.png`])
         app.stage.addChild(occupation_img);
@@ -440,6 +534,14 @@ async function showGachaResult() {
         app.stage.addChild(name_en);
         c.slide(name_zh, grid_w * (48 + 20), grid_h * 81, 60 * 30, 'linear');
         c.slide(name_en, grid_w * (48.5 + 20), grid_h * 88, 60 * 30, 'linear');
+        
+        if (single_ui_data.effect3) {
+          for (index in single_ui_data.effect3) {
+            addSpriteWithAni(single_ui_data.effect3, index, 'UI_single')
+            eval(`${index}.blendMode = PIXI.BLEND_MODES.HARD_LIGHT;`)
+          }
+        }
+
         c.wait(800).then(() => {
           app.stage.on('pointertap', function () {
             app.stage.children = []

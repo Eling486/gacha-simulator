@@ -1,0 +1,17 @@
+{   
+    "arrows":{
+        "arrow_white01": {
+            "x": 10,
+            "y": 70,
+            "scale_x": 0.7,
+            "scale_y": 0.7,
+            "rotation": 3.14
+        },
+        "arrow_white02": {
+            "x": 100,
+            "y": 55,
+            "scale_x": 0.7,
+            "scale_y": 0.7
+        }
+    }
+}
