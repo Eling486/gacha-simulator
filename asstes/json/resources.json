@@ -16,5 +16,23 @@
             "name": "pool_ui",
             "url": "asstes/img/pools/SP_035.json"
         }
+    ],
+    "online_resources": [
+        {
+            "name": "basic_ui",
+            "url": "https://eling-1258601402.file.myqcloud.com/gacha-simulator/asstes/img/ui/basic.json"
+        },
+        {
+            "name": "single_ui",
+            "url": "https://eling-1258601402.file.myqcloud.com/gacha-simulator/asstes/img/ui/single.json"
+        },
+        {
+            "name": "basic_pool_ui",
+            "url": "https://eling-1258601402.file.myqcloud.com/gacha-simulator/asstes/img/pools/basic.json"
+        },
+        {
+            "name": "pool_ui",
+            "url": "https://eling-1258601402.file.myqcloud.com/gacha-simulator/asstes/img/pools/SP_035.json"
+        }
     ]
 }
