@@ -249,24 +249,25 @@ function gachaConfirm(type) {
     if (!loader.resources[result[0].id.split('_')[1]]) {
       console.log('need load')
       loader
-        .add(result[0].id.split('_')[1], `https://eling486.github.io/gacha-simulator/asstes/characters/standing/${result[0].id}.png`)
-        //.add('sora', `./asstes/characters/standing/101_sora.png`)
-        .onLoad.add(function(){showGachaResult(result)});
+        .add(result[0].id.split('_')[1], `https://eling-1258601402.file.myqcloud.com/gacha-simulator/asstes/characters/standing/${result[0].id}.png`)
+        //.add(result[0].id.split('_')[1], `./asstes/characters/standing/${result[0].id}.png`)
+        .load(showGachaResult);
     } else {
       console.log('exist')
       app.stage.children = []
-      showGachaResult(result)
+      showGachaResult()
     }
   }
   if (type == 'tentimes') {
     result = gachaTenTimes()
 
-    showGachaResult(result)
+    showGachaResult()
   }
 }
 
-async function showGachaResult(result) {
-  app.stage.children = []
+async function showGachaResult() {
+  let result = window.last_gacha_result
+  //app.stage.children = []
   single_ui_data = await loadJson(`./asstes/json/ui/single.json`)
   UI_single = loader.resources['single_ui'].textures;
   if (result.length == 1) {
@@ -347,6 +348,18 @@ async function showGachaResult(result) {
             c.slide(star0${i}, grid_w * ${_position[`star0${i}`].x + 25} - star0${i}.width / 2, grid_h * ${_position[`star0${i}`].y} - star0${i}.height / 2, 60 * 20, 'linear');
           }`)
         }
+
+        let name_zh_style = new TextStyle({
+          "fontFamily": "TeYaSong",
+          "fontSize": 18,
+          "lineHeight": 30,
+          "fill": "white"
+        });
+        name_zh = new Text(result[0].name.zh, name_zh_style);
+        app.stage.addChild(name_zh);
+        //${ index }.scale.set(${ _position.scale_x }, ${ _position.scale_y });
+        //${ index }.position.set(grid_w * ${ _position.x } - ${ index }.width / 2, grid_h * ${ _position.y } - ${ index }.height / 2)
+
         app.stage.on('pointertap', function () {
           console.log
           app.stage.children = []
