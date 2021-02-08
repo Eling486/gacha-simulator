@@ -179,8 +179,8 @@ async function loadGachaPage() {
 function loadGachaPageRes() {
   if (window.first_load == true) {
     loader
-      .add(resources_json.online_resources)
-      // .add(resources_json.resources)
+      //.add(resources_json.online_resources)
+      .add(resources_json.resources)
       .load(setup);
   } else {
     setup()
@@ -291,7 +291,7 @@ function loadOrganization(){
   let result = window.last_gacha_result
   if (!loader.resources[window.chars_json.organizations[result[0].organization].icon_name]) {
     loader
-      .add(result[0].id.split('_')[1], `https://eling-1258601402.file.myqcloud.com/gacha-simulator/asstes/img/organizations/${window.chars_json.organizations[result[0].organization].icon_name}.png`)
+      .add(window.chars_json.organizations[result[0].organization].icon_name, `https://eling-1258601402.file.myqcloud.com/gacha-simulator/asstes/img/organizations/${window.chars_json.organizations[result[0].organization].icon_name}.png`)
       //.add(window.chars_json.organizations[result[0].organization].icon_name, `./asstes/img/organizations/${window.chars_json.organizations[result[0].organization].icon_name}.png`)
       .load(showGachaResult);
   } else {
