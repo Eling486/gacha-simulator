@@ -155,6 +155,24 @@ async function loadGachaPage() {
     document.body.appendChild(app.view);
   }
   app.stage.interactive = true;
+  let font_load_style_1 = new TextStyle({
+    "fontFamily": "TeYaSong",
+    "fontSize": 10,
+    "lineHeight": 10,
+    "fill": "white"
+  });
+  let font_load_style_2 = new TextStyle({
+    "fontFamily": "NovecentoWide",
+    "fontSize": 10,
+    "lineHeight": 10,
+    "fill": "white"
+  });
+  load_font_1 = new Text('Load Font', font_load_style_1);
+  load_font_2 = new Text('Load Font', font_load_style_2);
+  load_font_1.alpha = 0.01
+  load_font_2.alpha = 0.01
+  app.stage.addChild(load_font_1);
+  app.stage.addChild(load_font_2);
   loadGachaPageRes();
 }
 
@@ -204,7 +222,10 @@ function loadGachaPageRes() {
         addText(pool_ui_data.text, index)
       }
     }
-
+    if (window.gacha_times >= 10 || window.six_num > 0 || window.five_num > 0) {
+      tentimes_up.alpha = 0
+      tentimes_up_text.alpha = 0
+    }
     btn_once.interactive = true;
     btn_once.buttonMode = true
     btn_once.on('pointerdown', function () {
@@ -251,7 +272,7 @@ function gachaConfirm(type) {
       loader
         .add(result[0].id.split('_')[1], `https://eling-1258601402.file.myqcloud.com/gacha-simulator/asstes/characters/standing/${result[0].id}.png`)
         //.add(result[0].id.split('_')[1], `./asstes/characters/standing/${result[0].id}.png`)
-        .load(showGachaResult);
+        .load(loadOrganization);
     } else {
       console.log('exist')
       app.stage.children = []
@@ -261,6 +282,20 @@ function gachaConfirm(type) {
   if (type == 'tentimes') {
     result = gachaTenTimes()
 
+    showGachaResult()
+  }
+}
+
+function loadOrganization(){
+  let result = window.last_gacha_result
+  if (!loader.resources[window.chars_json.organizations[result[0].organization].icon_name]) {
+    loader
+      //.add(result[0].id.split('_')[1], `https://eling-1258601402.file.myqcloud.com/gacha-simulator/asstes/characters/standing/${result[0].id}.png`)
+      .add(window.chars_json.organizations[result[0].organization].icon_name, `./asstes/img/organizations/${window.chars_json.organizations[result[0].organization].icon_name}.png`)
+      .load(showGachaResult);
+  } else {
+    console.log('exist')
+    app.stage.children = []
     showGachaResult()
   }
 }
@@ -306,7 +341,7 @@ async function showGachaResult() {
           c.wait(50).then(() => {
             addSpriteWithAni(single_ui_data.stars, `star0${star_order[n]}`, 'UI_single')
             window.eval(`star0${star_order[n]}.anchor.set(0.5, 0.5);
-            c.scale(star0${star_order[n]}, 0.55, 0.55, 60 * 0.1);
+            c.scale(star0${star_order[n]}, 0.58, 0.58, 60 * 0.1);
             c.wait(105).then(() => {
               c.scale(star0${star_order[n]}, 0.5, 0.5, 60 * 0.1);
             });`)
@@ -331,14 +366,24 @@ async function showGachaResult() {
             shanshuo_1.position.set(grid_w * single_ui_data.mask['shanshuo_1'].x_2, grid_h * single_ui_data.mask['shanshuo_1'].y_2)
           })
         })*/
+
         char_any.alpha = 0
         mg.alpha = 1
+
+        let organization = window.chars_json.organizations[result[0].organization].icon_name
         let name = result[0].id.split('_')[1]
-        let _add = `${name} = new Sprite(loader.resources['${name}'].texture);
+        let _add = `${organization} = new Sprite(loader.resources['${organization}'].texture);
+          app.stage.addChild(${organization});
+          ${organization}.scale.set(0.7, 0.7);
+          ${organization}.position.set(grid_w * 38 - ${organization}.width / 2, grid_h * 40 - ${organization}.height / 2);
+          c.slide(${organization}, grid_w * (38 + 10) - ${organization}.width / 2, grid_h * 40 - ${organization}.height / 2, 60 * 30, 'linear');
+          ${name} = new Sprite(loader.resources['${name}'].texture);
           app.stage.addChild(${name});
           ${name}.scale.set(0.8, 0.8);
-          ${name}.position.set(grid_w * 56 - ${name}.width / 2, grid_h * 70 - ${name}.height / 2)`;
+          ${name}.position.set(grid_w * 56 - ${name}.width / 2, grid_h * 70 - ${name}.height / 2);
+          c.slide(${name}, grid_w * (56 + 10) - ${name}.width / 2, grid_h * 70 - ${name}.height / 2, 60 * 30, 'linear');`;
         window.eval(_add)
+
         for (var i = 1; i < num + 1; i++) {
           let _position = single_ui_data.stars_2
           eval(`if(star0${i}){
@@ -348,23 +393,56 @@ async function showGachaResult() {
             c.slide(star0${i}, grid_w * ${_position[`star0${i}`].x + 25} - star0${i}.width / 2, grid_h * ${_position[`star0${i}`].y} - star0${i}.height / 2, 60 * 20, 'linear');
           }`)
         }
+        
+        let occupation = window.chars_json.occupation[result[0].occupation].icon_name
+        occupation_img = new Sprite(UI_single[`${occupation}_b.png`])
+        app.stage.addChild(occupation_img);
+        occupation_img.anchor.set(1, 0.5)
+        occupation_img.position.set(grid_w * 48, grid_h * 81.5);
+        c.slide(occupation_img, grid_w * (48 + 20), grid_h * 81.5, 60 * 30, 'linear');
 
         let name_zh_style = new TextStyle({
-          "fontFamily": "TeYaSong",
-          "fontSize": 18,
-          "lineHeight": 30,
-          "fill": "white"
+          fontFamily: "TeYaSong",
+          fontSize: 70,
+          lineHeight: 30,
+          fill: "white",
+          stroke: '#000000',
+          strokeThickness: 1,
+          dropShadow: true,
+          dropShadowColor: "#000000",
+          dropShadowBlur: 4,
+          dropShadowAngle: 0,
+          dropShadowDistance: 0
         });
+        let name_en_style = new TextStyle({
+          fontFamily: "NovecentoWide",
+          fontSize: 30,
+          lineHeight: 30,
+          fill: "white",
+          stroke: '#000000',
+          strokeThickness: 1,
+          dropShadow: true,
+          dropShadowColor: "#000000",
+          dropShadowBlur: 2,
+          dropShadowAngle: 0,
+          dropShadowDistance: 0
+        });
+        name_en = new Text(result[0].name.en.toUpperCase(), name_en_style);
         name_zh = new Text(result[0].name.zh, name_zh_style);
+        name_zh.anchor.set(0, 0.5)
+        name_en.anchor.set(0, 0.5)
+        name_zh.position.set(grid_w * 48, grid_h * 81);
+        name_en.position.set(grid_w * 48.5, grid_h * 88);
         app.stage.addChild(name_zh);
-        //${ index }.scale.set(${ _position.scale_x }, ${ _position.scale_y });
-        //${ index }.position.set(grid_w * ${ _position.x } - ${ index }.width / 2, grid_h * ${ _position.y } - ${ index }.height / 2)
-
-        app.stage.on('pointertap', function () {
-          console.log
-          app.stage.children = []
-          app.stage._events = {}
-          loadGachaPage()
+        app.stage.addChild(name_en);
+        c.slide(name_zh, grid_w * (48 + 20), grid_h * 81, 60 * 30, 'linear');
+        c.slide(name_en, grid_w * (48.5 + 20), grid_h * 88, 60 * 30, 'linear');
+        c.wait(800).then(() => {
+          app.stage.on('pointertap', function () {
+            app.stage.children = []
+            app.stage._events = {}
+            loadGachaPage()
+          })
         })
       })
     })
