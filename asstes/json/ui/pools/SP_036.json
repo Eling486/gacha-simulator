@@ -1,0 +1,109 @@
+{
+    "position": {
+        "bg": {
+            "x": 46,
+            "y": 46,
+            "scale_x": 0.9,
+            "scale_y": 0.9
+        },
+        "mg_right": {
+            "x": 70,
+            "y": 62,
+            "scale_x": 0.9,
+            "scale_y": 0.9
+        },
+        "mg_left": {
+            "x": 32,
+            "y": 50,
+            "scale_x": 1,
+            "scale_y": 1
+        },
+        "title": {
+            "x": 52,
+            "y": 48,
+            "scale_x": 0.95,
+            "scale_y": 0.95
+        },
+        "name_dusk": {
+            "x": 36.5,
+            "y": 59,
+            "scale_x": 0.95,
+            "scale_y": 0.95
+        },
+        "name_saga": {
+            "x": 73,
+            "y": 58,
+            "scale_x": 0.95,
+            "scale_y": 0.95
+        },
+        "up": {
+            "x": 28,
+            "y": 80,
+            "scale_x": 0.9,
+            "scale_y": 0.9
+        }
+    },
+    "add_from_basic": {
+        "btn_details_left": {
+            "x": 34,
+            "y": 70,
+            "scale_x": 0.9,
+            "scale_y": 0.9
+        },
+        "btn_details_right": {
+            "x": 70,
+            "y": 70,
+            "scale_x": 0.9,
+            "scale_y": 0.9
+        }
+    },
+    "text": {
+        "txt_details": {
+            "content": "月隐晦明\n结束于2月19日 03:59",
+            "style": {
+                "fontFamily": "Notosanshans",
+                "fontSize": 18,
+                "lineHeight": 30,
+                "fill": "white"
+            },
+            "position":{
+                "x": 11,
+                "y": 94.5,
+                "scale_x": 1,
+                "scale_y": 1
+            }
+        },
+        "txt_preview_1": {
+            "content": "精英阶段2\n预览",
+            "style": {
+                "fontFamily": "Notosanshans",
+                "fontSize": 15,
+                "lineHeight": 16,
+                "align": "center",
+                "fill": "white"
+            },
+            "position":{
+                "x": 28,
+                "y": 69.7,
+                "scale_x": 1,
+                "scale_y": 1
+            }
+        },
+        "txt_preview_2": {
+            "content": "精英阶段2\n预览",
+            "style": {
+                "fontFamily": "Notosanshans",
+                "fontSize": 15,
+                "lineHeight": 16,
+                "align": "center",
+                "fill": "white"
+            },
+            "position":{
+                "x": 76,
+                "y": 70,
+                "scale_x": 1,
+                "scale_y": 1
+            }
+        }
+    }
+}

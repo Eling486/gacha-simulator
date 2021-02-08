@@ -1,5 +1,5 @@
 {
-    "default": "SP_035",
+    "default": "SP_036",
     "pools": [
         {
             "id": "SP_035",
@@ -227,11 +227,124 @@
                     "423_blemishine",
                     "311_mudrock",
                     "264_mountain",
-                    "332_archetto"
+                    "332_archetto",
+                    "362_saga",
+                    "2015_dusk"
                 ],
-                "five": [],
-                "four": [],
-                "three": []
+                "five": [
+                    "101_sora",
+                    "102_texas",
+                    "106_franka",
+                    "107_liskarm",
+                    "108_silence",
+                    "115_lindong",
+                    "128_ptilopsis",
+                    "129_bluep",
+                    "140_lappland",
+                    "143_specter",
+                    "144_red",
+                    "145_provence",
+                    "148_nearl",
+                    "158_firewatch",
+                    "164_nightmare",
+                    "166_skyfire",
+                    "171_warfarin",
+                    "173_cliffheart",
+                    "174_pramanix",
+                    "195_zhenli",
+                    "201_croissant",
+                    "204_platinum",
+                    "214_kafka",
+                    "215_manticore",
+                    "218_andreana",
+                    "219_meteorite",
+                    "226_hung",
+                    "241_panda",
+                    "242_mayer",
+                    "243_waaifu",
+                    "254_shamare",
+                    "261_reed",
+                    "274_astesia",
+                    "279_executor",
+                    "289_matoimaru",
+                    "294_ayerscarpe",
+                    "306_leizi",
+                    "308_swire",
+                    "326_glaucus",
+                    "338_iris",
+                    "343_tsukinogi",
+                    "344_beeswax",
+                    "346_aosta",
+                    "349_chiave",
+                    "356_broca",
+                    "365_april",
+                    "367_greythroat",
+                    "373_leonhardt",
+                    "378_asbestos",
+                    "379_sesa",
+                    "401_elysium",
+                    "415_flint",
+                    "436_whisperain",
+                    "455_nothing"
+                ],
+                "four": [
+                    "109_gitano",
+                    "110_deepcolor",
+                    "117_myrrh",
+                    "118_yuki",
+                    "126_meteor",
+                    "130_dobermann",
+                    "133_may",
+                    "137_beehunter",
+                    "141_haze",
+                    "149_scavenger",
+                    "150_cuora",
+                    "151_myrtle",
+                    "181_perfumer",
+                    "183_earthspirit",
+                    "185_mousse",
+                    "190_vermeil",
+                    "193_frostleaf",
+                    "196_gumi",
+                    "199_matterhorn",
+                    "235_jessica",
+                    "236_rope",
+                    "237_gravel",
+                    "253_greyy",
+                    "258_podenco",
+                    "271_arene",
+                    "272_jaye",
+                    "277_shaw",
+                    "290_vigna",
+                    "298_sussurro",
+                    "301_cutter",
+                    "302_ambriel",
+                    "328_click",
+                    "337_utage",
+                    "347_jackie",
+                    "366_aciddrop",
+                    "381_bubble",
+                    "440_pinecone",
+                    "452_beanstalk"
+                ],
+                "three": [
+                    "120_hibiscus",
+                    "121_lava",
+                    "122_beagle",
+                    "123_fang",
+                    "124_kroos",
+                    "208_melantha",
+                    "209_cardigan",
+                    "210_steward",
+                    "211_adnachiel",
+                    "212_ansel",
+                    "240_vanilla",
+                    "278_orchid",
+                    "281_popukar",
+                    "282_catapult",
+                    "283_midnight",
+                    "284_spot"
+                ]
             },
             "rules": {
                 "all": 10000,
@@ -239,17 +352,17 @@
                     "all": 0.02,
                     "rate_up": [
                         {
-                            "char_id": "001",
+                            "char_id": "362_saga",
                             "rate": 0.35
                         },
                         {
-                            "char_id": "002",
+                            "char_id": "2015_dusk",
                             "rate": 0.35
                         }
                     ],
                     "weight_up": [
                         {
-                            "char_id": "003",
+                            "char_id": "2014_nian",
                             "weight": 5
                         }
                     ]
@@ -258,7 +371,7 @@
                     "all": 0.08,
                     "rate_up": [
                         {
-                            "char_id": "004",
+                            "char_id": "455_nothing",
                             "rate": 0.35
                         }
                     ]
