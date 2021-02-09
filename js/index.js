@@ -201,8 +201,8 @@ function loadGachaPageRes() {
   function loadPoolRes() {
     if (!loader.resources[`${window.pool_id}`]) {
       loader
-        .add(`${window.pool_id}`, `https://evanchen486.gitee.io/gacha-simulator/asstes/img/pools/${window.pool_id}.json`)
-        //.add(`${window.pool_id}`, `./asstes/img/pools/${window.pool_id}.json`)
+        //.add(`${window.pool_id}`, `https://evanchen486.gitee.io/gacha-simulator/asstes/img/pools/${window.pool_id}.json`)
+        .add(`${window.pool_id}`, `./asstes/img/pools/${window.pool_id}.json`)
         .load(setup);
     } else {
       setup()
@@ -366,8 +366,8 @@ function gachaConfirm(type) {
     if (!loader.resources[result[0].id.split('_')[1]]) {
       console.log('need load')
       loader
-        .add(result[0].id.split('_')[1], `https://evanchen486.gitee.io/gacha-simulator/asstes/characters/standing/${result[0].id}.png`)
-        //.add(result[0].id.split('_')[1], `./asstes/characters/standing/${result[0].id}.png`)
+        //.add(result[0].id.split('_')[1], `https://evanchen486.gitee.io/gacha-simulator/asstes/characters/standing/${result[0].id}.png`)
+        .add(result[0].id.split('_')[1], `./asstes/characters/standing/${result[0].id}.png`)
         .load(loadOrganization);
     } else {
       console.log('exist')
@@ -386,8 +386,8 @@ function loadOrganization() {
   let result = window.last_gacha_result
   if (!loader.resources[window.chars_json.organizations[result[0].organization].icon_name]) {
     loader
-      .add(window.chars_json.organizations[result[0].organization].icon_name, `https://evanchen486.gitee.io/gacha-simulator/asstes/img/organizations/${window.chars_json.organizations[result[0].organization].icon_name}.png`)
-      //.add(window.chars_json.organizations[result[0].organization].icon_name, `./asstes/img/organizations/${window.chars_json.organizations[result[0].organization].icon_name}.png`)
+      //.add(window.chars_json.organizations[result[0].organization].icon_name, `https://evanchen486.gitee.io/gacha-simulator/asstes/img/organizations/${window.chars_json.organizations[result[0].organization].icon_name}.png`)
+      .add(window.chars_json.organizations[result[0].organization].icon_name, `./asstes/img/organizations/${window.chars_json.organizations[result[0].organization].icon_name}.png`)
       .load(showGachaResult);
   } else {
     console.log('exist')
