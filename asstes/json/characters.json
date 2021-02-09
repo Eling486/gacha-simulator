@@ -273,7 +273,7 @@
             "stars": 4,
             "limit": false,
             "occupation": 3,
-            "organization": 0
+            "organization": 29
         },
         "134_ifrit": {
             "id": "134_ifrit",
@@ -790,7 +790,7 @@
             "stars": 6,
             "limit": false,
             "occupation": 1,
-            "organization": 0
+            "organization": 29
         },
         "225_aak": {
             "id":"225_aak",
