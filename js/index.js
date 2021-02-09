@@ -17,6 +17,7 @@ let app, bg, grid_w, grid_h, basic_ui_data, pool_ui_data, basic_pool_ui_data, si
 let sprites_on_stage = [],
   single_effect_sprites = []
 let UI_single, UI_pool_basic, UI_pool
+let show_process
 
 let poolPage = new Container(),
   singlePage = new Container()
@@ -355,6 +356,7 @@ function gachaConfirm(type) {
     result = gachaOnce()
     app.stage.children = []
     sprites_on_stage = []
+    show_process = 0
     /*
     let char_id = '136_hoshiguma' // 调试用
     let gacha_result = []
@@ -362,113 +364,171 @@ function gachaConfirm(type) {
     gacha_result.push(char_obj)
     result = gacha_result
     */
-    console.log(result)
-    if (!loader.resources[result[0].id.split('_')[1]]) {
-      console.log('need load')
-      loader
-        //.add(result[0].id.split('_')[1], `https://evanchen486.gitee.io/gacha-simulator/asstes/characters/standing/${result[0].id}.png`)
-        .add(result[0].id.split('_')[1], `./asstes/characters/standing/${result[0].id}.png`)
-        .load(loadOrganization);
-    } else {
-      console.log('exist')
-      app.stage.children = []
-      showGachaResult()
-    }
+   console.log(result)
+    loadCharRes()
   }
   if (type == 'tentimes') {
     result = gachaTenTimes()
+    show_process = 0
+    loadCharRes()
+  }
+}
 
+function loadCharRes(){
+  let index = show_process
+  if (!loader.resources[result[index].id.split('_')[1]]) {
+    console.log('need load')
+    loader
+      //.add(result[index].id.split('_')[1], `https://evanchen486.gitee.io/gacha-simulator/asstes/characters/standing/${result[index].id}.png`)
+      .add(result[index].id.split('_')[1], `./asstes/characters/standing/${result[index].id}.png`)
+      .load(loadOrganization);
+  } else {
+    console.log('exist')
     showGachaResult()
   }
 }
+/*
+function loadTenTimesRes() {
+  let next_index = index + 1
+  if (index < 9) {
+    if (!loader.resources[result[index].id.split('_')[1]]) {
+      console.log('need load')
+      loader
+        //.add(result[index].id.split('_')[1], `https://evanchen486.gitee.io/gacha-simulator/asstes/characters/standing/${result[index].id}.png`)
+        .add(result[index].id.split('_')[1], `./asstes/characters/standing/${result[index].id}.png`)
+        .load(loadTenTimesRes(next_index));
+    } else {
+      console.log('exist')
+      loadTenTimesRes(next_index)
+    }
+  }
+  if (index == 9) {
+    if (!loader.resources[result[index].id.split('_')[1]]) {
+      console.log('need load')
+      loader
+        //.add(result[index].id.split('_')[1], `https://evanchen486.gitee.io/gacha-simulator/asstes/characters/standing/${result[index].id}.png`)
+        .add(result[index].id.split('_')[1], `./asstes/characters/standing/${result[index].id}.png`)
+        .load(loadTenOrganization(0));
+    } else {
+      console.log('exist')
+      loadTenOrganization(0)
+    }
+  }
+}*/
 
 function loadOrganization() {
   let result = window.last_gacha_result
-  if (!loader.resources[window.chars_json.organizations[result[0].organization].icon_name]) {
+  let index = show_process
+  if (!loader.resources[window.chars_json.organizations[result[index].organization].icon_name]) {
     loader
-      //.add(window.chars_json.organizations[result[0].organization].icon_name, `https://evanchen486.gitee.io/gacha-simulator/asstes/img/organizations/${window.chars_json.organizations[result[0].organization].icon_name}.png`)
-      .add(window.chars_json.organizations[result[0].organization].icon_name, `./asstes/img/organizations/${window.chars_json.organizations[result[0].organization].icon_name}.png`)
+      //.add(window.chars_json.organizations[result[index].organization].icon_name, `https://evanchen486.gitee.io/gacha-simulator/asstes/img/organizations/${window.chars_json.organizations[result[0].organization].icon_name}.png`)
+      .add(window.chars_json.organizations[result[index].organization].icon_name, `./asstes/img/organizations/${window.chars_json.organizations[result[index].organization].icon_name}.png`)
       .load(showGachaResult);
   } else {
     console.log('exist')
-    app.stage.children = []
     showGachaResult()
   }
 }
-
+/*
+function loadTenOrganization(index) {
+  let result = window.last_gacha_result
+  let next_index = index + 1
+  if(index < 9){
+    if (!loader.resources[window.chars_json.organizations[result[0].organization].icon_name]) {
+      loader
+        //.add(window.chars_json.organizations[result[index].organization].icon_name, `https://evanchen486.gitee.io/gacha-simulator/asstes/img/organizations/${window.chars_json.organizations[result[index].organization].icon_name}.png`)
+        .add(window.chars_json.organizations[result[index].organization].icon_name, `./asstes/img/organizations/${window.chars_json.organizations[result[index].organization].icon_name}.png`)
+        .load(loadTenOrganization(next_index));
+    }else{
+      loadTenOrganization(next_index)
+    }
+  }
+  if(index == 9){
+    if (!loader.resources[window.chars_json.organizations[result[0].organization].icon_name]) {
+      loader
+        //.add(window.chars_json.organizations[result[index].organization].icon_name, `https://evanchen486.gitee.io/gacha-simulator/asstes/img/organizations/${window.chars_json.organizations[result[index].organization].icon_name}.png`)
+        .add(window.chars_json.organizations[result[index].organization].icon_name, `./asstes/img/organizations/${window.chars_json.organizations[result[index].organization].icon_name}.png`)
+        .load(showGachaResult);
+    }else{
+      showGachaResult()
+    }
+  }
+}
+*/
 async function showGachaResult() {
   let result = window.last_gacha_result
-  //app.stage.children = []
+  app.stage.children = []
   single_ui_data = await loadJson(`./asstes/json/ui/single.json`)
   UI_single = loader.resources['single_ui'].textures;
-  if (result.length == 1) {
-    for (index in single_ui_data.preload) {
-      addSpriteWithAni(single_ui_data.preload, index, 'UI_single')
-    }
-    mg.alpha = 0
-    for (index in single_ui_data.effect1) {
-      addSpriteWithAni(single_ui_data.effect1, index, 'UI_single')
-    }
-    addSpriteWithAni(single_ui_data.char_any, 'char_any', 'UI_single')
 
-    for (index in single_ui_data.effect2) {
-      addSpriteWithAni(single_ui_data.effect2, index, 'UI_single')
-      eval(`${index}.blendMode = PIXI.BLEND_MODES.HARD_LIGHT;`)
-    }
+  for (index in single_ui_data.preload) {
+    addSpriteWithAni(single_ui_data.preload, index, 'UI_single')
+  }
+  mg.alpha = 0
+  for (index in single_ui_data.effect1) {
+    addSpriteWithAni(single_ui_data.effect1, index, 'UI_single')
+  }
+  addSpriteWithAni(single_ui_data.char_any, 'char_any', 'UI_single')
 
-    starContainer = new PIXI.ParticleContainer(1500, { alpha: true, scale: true, rotation: true, uvs: true });
-    app.stage.addChild(starContainer);
+  for (index in single_ui_data.effect2) {
+    addSpriteWithAni(single_ui_data.effect2, index, 'UI_single')
+    eval(`${index}.blendMode = PIXI.BLEND_MODES.HARD_LIGHT;`)
+  }
 
-    function showStars(i) {
-      let _position = single_ui_data.effect_stars
-      i -= 1
-      d.create(grid_w * _position[i].x, grid_h * _position[i].y, () => new Sprite(UI_single["s_2.png"]), starContainer, 12, 0, false, 0, 6.28, 30, 40, 3, 8, 0.01, 0.05, 0.02, 0.08);
-    }
+  starContainer = new PIXI.ParticleContainer(1500, { alpha: true, scale: true, rotation: true, uvs: true });
+  app.stage.addChild(starContainer);
 
-    let one_star_time = 70
-    let num = result[0].stars
-    // num = 6 // 调试用
-    let star_order = [4, 3, 2, 1, 5, 6]
-    for (i = 0; i < 6; i++) {
-      if (star_order[i] <= num) {
-        let n = i
-        c.wait(600 + one_star_time * n).then(() => {
-          showStars(star_order[n])
-          c.wait(50).then(() => {
-            addSpriteWithAni(single_ui_data.stars, `star0${star_order[n]}`, 'UI_single')
-            window.eval(`star0${star_order[n]}.anchor.set(0.5, 0.5);
+  function showStars(i) {
+    let _position = single_ui_data.effect_stars
+    i -= 1
+    d.create(grid_w * _position[i].x, grid_h * _position[i].y, () => new Sprite(UI_single["s_2.png"]), starContainer, 12, 0, false, 0, 6.28, 30, 40, 3, 8, 0.01, 0.05, 0.02, 0.08);
+  }
+
+  let one_star_time = 70
+  console.log(show_process)
+  let num = result[show_process].stars
+  // num = 6 // 调试用
+  let star_order = [4, 3, 2, 1, 5, 6]
+  for (i = 0; i < 6; i++) {
+    if (star_order[i] <= num) {
+      let n = i
+      c.wait(600 + one_star_time * n).then(() => {
+        showStars(star_order[n])
+        c.wait(50).then(() => {
+          addSpriteWithAni(single_ui_data.stars, `star0${star_order[n]}`, 'UI_single')
+          window.eval(`star0${star_order[n]}.anchor.set(0.5, 0.5);
             c.scale(star0${star_order[n]}, 0.58, 0.58, 60 * 0.1);
             c.wait(105).then(() => {
               c.scale(star0${star_order[n]}, 0.5, 0.5, 60 * 0.1);
             });`)
-          })
         })
-      }
+      })
     }
+  }
 
-    c.wait(1500).then(() => {
-      addSpriteWithAni(single_ui_data.mask, `mask_r_1`, 'UI_single')
-      mask_r_1.anchor.set(0.5, 0.5)
-      mask_r_1.alpha = 0
-      c.scale(mask_r_1, 10, 10, 60 * 0.8)
-      c.fadeIn(mask_r_1, 60 * 0.5)
-      mask_r_1.zIndex = 999
-      c.wait(800).then(() => {
-        c.fadeOut(mask_r_1, 60 * 0.4)
-        /*
-        c.wait(200).then(() => {
-          addSpriteWithAni(single_ui_data.mask, `shanshuo_1`, 'UI_single')
-          c.wait(100).then(() => {
-            shanshuo_1.position.set(grid_w * single_ui_data.mask['shanshuo_1'].x_2, grid_h * single_ui_data.mask['shanshuo_1'].y_2)
-          })
-        })*/
+  c.wait(1500).then(() => {
+    addSpriteWithAni(single_ui_data.mask, `mask_r_1`, 'UI_single')
+    mask_r_1.anchor.set(0.5, 0.5)
+    mask_r_1.alpha = 0
+    c.scale(mask_r_1, 10, 10, 60 * 0.8)
+    c.fadeIn(mask_r_1, 60 * 0.5)
+    mask_r_1.zIndex = 999
+    c.wait(800).then(() => {
+      c.fadeOut(mask_r_1, 60 * 0.4)
+      /*
+      c.wait(200).then(() => {
+        addSpriteWithAni(single_ui_data.mask, `shanshuo_1`, 'UI_single')
+        c.wait(100).then(() => {
+          shanshuo_1.position.set(grid_w * single_ui_data.mask['shanshuo_1'].x_2, grid_h * single_ui_data.mask['shanshuo_1'].y_2)
+        })
+      })*/
 
-        char_any.alpha = 0
-        mg.alpha = 1
+      char_any.alpha = 0
+      mg.alpha = 1
 
-        let organization = window.chars_json.organizations[result[0].organization].icon_name
-        let name = result[0].id.split('_')[1]
-        let _add = `${organization} = new Sprite(loader.resources['${organization}'].texture);
+      let organization = window.chars_json.organizations[result[show_process].organization].icon_name
+      let name = result[show_process].id.split('_')[1]
+      let _add = `${organization} = new Sprite(loader.resources['${organization}'].texture);
           app.stage.addChild(${organization});
           ${organization}.scale.set(0.7, 0.7);
           ${organization}.position.set(grid_w * 38 - ${organization}.width / 2, grid_h * 40 - ${organization}.height / 2);
@@ -478,77 +538,95 @@ async function showGachaResult() {
           ${name}.scale.set(0.8, 0.8);
           ${name}.position.set(grid_w * 56 - ${name}.width / 2, grid_h * 70 - ${name}.height / 2);
           c.slide(${name}, grid_w * (56 + 10) - ${name}.width / 2, grid_h * 70 - ${name}.height / 2, 60 * 30, 'linear');`;
-        window.eval(_add)
+      window.eval(_add)
 
-        for (var i = 1; i < num + 1; i++) {
-          let _position = single_ui_data.stars_2
-          eval(`if(star0${i}){
+      for (var i = 1; i < num + 1; i++) {
+        let _position = single_ui_data.stars_2
+        eval(`if(star0${i}){
             star0${i}.anchor.set(0.5, 0.5)
             star0${i}.position.set(grid_w * ${_position[`star0${i}`].x} - star0${i}.width / 2, grid_h * ${_position[`star0${i}`].y} - star0${i}.height / 2);
             star0${i}.zIndex = 100;
             c.slide(star0${i}, grid_w * ${_position[`star0${i}`].x + 25} - star0${i}.width / 2, grid_h * ${_position[`star0${i}`].y} - star0${i}.height / 2, 60 * 20, 'linear');
           }`)
+      }
+
+      let occupation = window.chars_json.occupation[result[show_process].occupation].icon_name
+      occupation_img = new Sprite(UI_single[`${occupation}_b.png`])
+      app.stage.addChild(occupation_img);
+      occupation_img.anchor.set(1, 0.5)
+      occupation_img.position.set(grid_w * 48, grid_h * 81.5);
+      c.slide(occupation_img, grid_w * (48 + 20), grid_h * 81.5, 60 * 30, 'linear');
+
+      let name_zh_style = new TextStyle({
+        fontFamily: "TeYaSong",
+        fontSize: 70,
+        lineHeight: 30,
+        fill: "white",
+        stroke: '#000000',
+        strokeThickness: 1,
+        dropShadow: true,
+        dropShadowColor: "#000000",
+        dropShadowBlur: 4,
+        dropShadowAngle: 0,
+        dropShadowDistance: 0
+      });
+      let name_en_style = new TextStyle({
+        fontFamily: "NovecentoWide",
+        fontSize: 30,
+        lineHeight: 30,
+        fill: "white",
+        stroke: '#000000',
+        strokeThickness: 1,
+        dropShadow: true,
+        dropShadowColor: "#000000",
+        dropShadowBlur: 2,
+        dropShadowAngle: 0,
+        dropShadowDistance: 0
+      });
+      name_en = new Text(result[show_process].name.en.toUpperCase(), name_en_style);
+      name_zh = new Text(result[show_process].name.zh, name_zh_style);
+      name_zh.anchor.set(0, 0.5)
+      name_en.anchor.set(0, 0.5)
+      name_zh.position.set(grid_w * 48, grid_h * 81);
+      name_en.position.set(grid_w * 48.5, grid_h * 88);
+      app.stage.addChild(name_zh);
+      app.stage.addChild(name_en);
+      c.slide(name_zh, grid_w * (48 + 20), grid_h * 81, 60 * 30, 'linear');
+      c.slide(name_en, grid_w * (48.5 + 20), grid_h * 88, 60 * 30, 'linear');
+
+      if (single_ui_data.effect3) {
+        for (index in single_ui_data.effect3) {
+          addSpriteWithAni(single_ui_data.effect3, index, 'UI_single')
+          eval(`${index}.blendMode = PIXI.BLEND_MODES.HARD_LIGHT;`)
         }
+      }
 
-        let occupation = window.chars_json.occupation[result[0].occupation].icon_name
-        occupation_img = new Sprite(UI_single[`${occupation}_b.png`])
-        app.stage.addChild(occupation_img);
-        occupation_img.anchor.set(1, 0.5)
-        occupation_img.position.set(grid_w * 48, grid_h * 81.5);
-        c.slide(occupation_img, grid_w * (48 + 20), grid_h * 81.5, 60 * 30, 'linear');
-
-        let name_zh_style = new TextStyle({
-          fontFamily: "TeYaSong",
-          fontSize: 70,
-          lineHeight: 30,
-          fill: "white",
-          stroke: '#000000',
-          strokeThickness: 1,
-          dropShadow: true,
-          dropShadowColor: "#000000",
-          dropShadowBlur: 4,
-          dropShadowAngle: 0,
-          dropShadowDistance: 0
-        });
-        let name_en_style = new TextStyle({
-          fontFamily: "NovecentoWide",
-          fontSize: 30,
-          lineHeight: 30,
-          fill: "white",
-          stroke: '#000000',
-          strokeThickness: 1,
-          dropShadow: true,
-          dropShadowColor: "#000000",
-          dropShadowBlur: 2,
-          dropShadowAngle: 0,
-          dropShadowDistance: 0
-        });
-        name_en = new Text(result[0].name.en.toUpperCase(), name_en_style);
-        name_zh = new Text(result[0].name.zh, name_zh_style);
-        name_zh.anchor.set(0, 0.5)
-        name_en.anchor.set(0, 0.5)
-        name_zh.position.set(grid_w * 48, grid_h * 81);
-        name_en.position.set(grid_w * 48.5, grid_h * 88);
-        app.stage.addChild(name_zh);
-        app.stage.addChild(name_en);
-        c.slide(name_zh, grid_w * (48 + 20), grid_h * 81, 60 * 30, 'linear');
-        c.slide(name_en, grid_w * (48.5 + 20), grid_h * 88, 60 * 30, 'linear');
-        
-        if (single_ui_data.effect3) {
-          for (index in single_ui_data.effect3) {
-            addSpriteWithAni(single_ui_data.effect3, index, 'UI_single')
-            eval(`${index}.blendMode = PIXI.BLEND_MODES.HARD_LIGHT;`)
-          }
-        }
-
-        c.wait(800).then(() => {
+      c.wait(800).then(() => {
+        if (result.length == 1) {
           app.stage.on('pointertap', function () {
             app.stage.children = []
             app.stage._events = {}
             loadGachaPage()
           })
-        })
+        }
+        if (result.length == 10) {
+          if (show_process < 9) {
+            app.stage.on('pointertap', function () {
+              show_process++
+              app.stage.children = []
+              app.stage._events = {}
+              loadCharRes()
+            })
+          }
+          if (show_process == 9) {
+            app.stage.on('pointertap', function () {
+              app.stage.children = []
+              app.stage._events = {}
+              loadGachaPage()
+            })
+          }
+        }
       })
     })
-  }
+  })
 }
