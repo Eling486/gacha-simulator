@@ -35,6 +35,7 @@ function loadJson(path) {
   })
 }
 
+// 清空所有数据
 function resetStatistics() {
   window.gacha_times = 0
   window.real_gacha_times = 0
@@ -64,6 +65,7 @@ window.onload = async function () {
   gameLoop()
 }
 
+// 屏幕自适应 - 待完善
 function updatePageSize() {
   window.app_h = 650
   window.app_w = window.app_h * 16 / 9
@@ -86,6 +88,7 @@ function updatePageSize() {
   }*/
 }
 
+// 一般精灵加载
 function addSprite(ui_data, index, UI_res, container = 'app.stage') {
   let _position = ui_data[index] // 下行用'0'分割字符串是用来进行相同纹理的元素区分的
   sprites_on_stage.push(index)
@@ -96,24 +99,32 @@ function addSprite(ui_data, index, UI_res, container = 'app.stage') {
   window.eval(_add)
 }
 
+// 带动画等效果的精灵加载
 function addSpriteWithAni(ui_data, index, UI_res, container = 'app.stage', type = 'normal') {
   addSprite(ui_data, index, UI_res, container)
+  // 改数组用于储存需循环播放的粒子效果，功能待添加
   if (type == 'effect') {
     single_effect_sprites.push(index)
   }
+  // 旋转效果
   if (ui_data[index].rotation) {
     eval(`${index}.rotation = ${ui_data[index].rotation}`)
   }
+  // 重新着色
   if (ui_data[index].tint) {
     eval(`${index}.tint = ${ui_data[index].tint}`)
   }
+  // 设置alpha（不透明度）
   if (ui_data[index].alpha) {
     eval(`${index}.alpha = ${ui_data[index].alpha}`)
   }
+  // 各动画效果
   if (ui_data[index].ani_type) {
+    // 一般滑动
     if (ui_data[index].ani_type.indexOf('slide') >= 0) {
       eval(`c.slide(${index}, grid_w * ${ui_data[index].end_x} - ${index}.width / 2, grid_h * ${ui_data[index].end_y} - ${index}.height / 2, 60 * ${ui_data[index].time})`)
     }
+    // 缩放，before_scale_time：缩放前等待的时间
     if (ui_data[index].ani_type.indexOf('scale') >= 0) {
       setTimeout(function () {
         eval(`c.scale(${index}, ${ui_data[index].end_scale_x}, ${ui_data[index].end_scale_y}, 60 * ${ui_data[index].time - ui_data[index].before_scale_time})`)
@@ -124,6 +135,7 @@ function addSpriteWithAni(ui_data, index, UI_res, container = 'app.stage', type 
         eval(`c.fadeOut(${index}, 60 * ${ui_data[index].time - ui_data[index].before_fade_time})`)
       }, ui_data[index].before_fade_time * 1000)
     }
+    // 闪烁
     if (ui_data[index].ani_type.indexOf('fadeLoop') >= 0) {
       setTimeout(function () {
         eval(`c.pulse(${index}, ${ui_data[index].time / 2} * 60, 0)`)
@@ -132,6 +144,7 @@ function addSpriteWithAni(ui_data, index, UI_res, container = 'app.stage', type 
   }
 }
 
+// 一般文字加载
 function addText(text_data, index, container = 'app.stage') {
   let _position = text_data[index].position
   sprites_on_stage.push(index)
@@ -143,11 +156,13 @@ function addText(text_data, index, container = 'app.stage') {
   window.eval(_add)
 }
 
+// 加载寻访页面
 async function loadGachaPage() {
   basic_ui_data = await loadJson('./asstes/json/ui/basic.json')
   basic_pool_ui_data = await loadJson('./asstes/json/ui/pools/basic.json')
   pool_ui_data = await loadJson(`./asstes/json/ui/pools/${window.pool_id}.json`)
   updatePageSize()
+  // 只在首次加载时创建app
   if (window.first_load == true) {
     app = new Application({
       width: window.app_w,
@@ -156,9 +171,10 @@ async function loadGachaPage() {
       transparent: false,
       resolution: 1
     });
-    document.body.appendChild(app.view);
+    document.querySelector('.app').appendChild(app.view);
   }
   app.stage.interactive = true;
+  // 字体预加载 - 改功能待改进
   let font_load_style_1 = new TextStyle({
     "fontFamily": "TeYaSong",
     "fontSize": 10,
@@ -189,7 +205,9 @@ async function loadGachaPage() {
   loadGachaPageRes();
 }
 
+// 加载寻访页资源
 function loadGachaPageRes() {
+  // 首次加载下载基本资源位置文件
   if (window.first_load == true) {
     loader
       //.add(resources_json.online_resources)
@@ -199,24 +217,25 @@ function loadGachaPageRes() {
     loadPoolRes()
   }
 
+  // 加载当期寻访页图像资源
   function loadPoolRes() {
     if (!loader.resources[`${window.pool_id}`]) {
       loader
         //.add(`${window.pool_id}`, `https://evanchen486.gitee.io/gacha-simulator/asstes/img/pools/${window.pool_id}.json`)
         .add(`${window.pool_id}`, `./asstes/img/pools/${window.pool_id}.json`)
-        .load(setup);
+        .load(gachaResLoaded);
     } else {
-      setup()
+      gachaResLoaded()
     }
   }
 
-  function setup() {
+  function gachaResLoaded() {
     window.first_load = false
     UI_basic = loader.resources['basic_ui'].textures;
     UI_pool = loader.resources[`${window.pool_id}`].textures;
     UI_pool_basic = loader.resources['basic_pool_ui'].textures;
 
-    // return showGachaResult() //调试用
+    // return showGachaResult() // 调试用，直接显示结果页
 
     // 背景元素提前加载
     for (index in basic_pool_ui_data.preload) {
@@ -261,6 +280,7 @@ function loadGachaPageRes() {
       }
     }
 
+    // 在up提示显示时才显示数字
     if (tentimes_up.alpha > 0) {
       let num_style = new TextStyle({
         fontFamily: "Notosanshans-Medium",
@@ -280,12 +300,8 @@ function loadGachaPageRes() {
       up_num.position.set(grid_w * 67, grid_h * 79.7);
       poolPage.addChild(up_num);
     }
-    /*
-    let filter;
-    filter = new PIXI.Filter(null, null, {
-      customUniform: 0.0,
-  });*/
-    // poolPage.filters = [filter];
+
+    // 淡入动画效果
     poolPage.alpha = 0
     app.stage.addChild(poolPage)
     app.ticker.add(() => {
@@ -296,7 +312,7 @@ function loadGachaPageRes() {
       }
     });
 
-
+    // 根据卡池资源显示左右切换箭头
     if (window.pools_json.pools[pools_index - 1]) {
       addSpriteWithAni(basic_ui_data.arrows, 'arrow_white01', 'UI_basic', 'app.stage')
       arrow_white01.interactive = true;
@@ -315,6 +331,7 @@ function loadGachaPageRes() {
       })
     }
 
+    // 设置按钮点击事件
     btn_once.interactive = true;
     btn_once.buttonMode = true
     btn_once.on('pointerdown', function () {
@@ -343,6 +360,7 @@ function loadGachaPageRes() {
   }
 }
 
+// 切换卡池
 function switchPool(index) {
   resetStatistics()
   window.pool_id = window.pools_json.pools[index].id
@@ -351,6 +369,7 @@ function switchPool(index) {
   loadGachaPage()
 }
 
+// 寻访确认 - 待完成
 function gachaConfirm(type) {
   if (type == 'once') {
     result = gachaOnce()
@@ -358,7 +377,7 @@ function gachaConfirm(type) {
     sprites_on_stage = []
     show_process = 0
     /*
-    let char_id = '136_hoshiguma' // 调试用
+    let char_id = '136_hoshiguma' // 调试用，直接寻访到某干员
     let gacha_result = []
     let char_obj = window.chars_json.characters[char_id]
     gacha_result.push(char_obj)
@@ -374,6 +393,7 @@ function gachaConfirm(type) {
   }
 }
 
+// 加载干员立绘
 function loadCharRes(){
   let index = show_process
   if (!loader.resources[result[index].id.split('_')[1]]) {
@@ -387,35 +407,8 @@ function loadCharRes(){
     showGachaResult()
   }
 }
-/*
-function loadTenTimesRes() {
-  let next_index = index + 1
-  if (index < 9) {
-    if (!loader.resources[result[index].id.split('_')[1]]) {
-      console.log('need load')
-      loader
-        //.add(result[index].id.split('_')[1], `https://evanchen486.gitee.io/gacha-simulator/asstes/characters/standing/${result[index].id}.png`)
-        .add(result[index].id.split('_')[1], `./asstes/characters/standing/${result[index].id}.png`)
-        .load(loadTenTimesRes(next_index));
-    } else {
-      console.log('exist')
-      loadTenTimesRes(next_index)
-    }
-  }
-  if (index == 9) {
-    if (!loader.resources[result[index].id.split('_')[1]]) {
-      console.log('need load')
-      loader
-        //.add(result[index].id.split('_')[1], `https://evanchen486.gitee.io/gacha-simulator/asstes/characters/standing/${result[index].id}.png`)
-        .add(result[index].id.split('_')[1], `./asstes/characters/standing/${result[index].id}.png`)
-        .load(loadTenOrganization(0));
-    } else {
-      console.log('exist')
-      loadTenOrganization(0)
-    }
-  }
-}*/
 
+// 加载标志
 function loadOrganization() {
   let result = window.last_gacha_result
   let index = show_process
@@ -429,32 +422,8 @@ function loadOrganization() {
     showGachaResult()
   }
 }
-/*
-function loadTenOrganization(index) {
-  let result = window.last_gacha_result
-  let next_index = index + 1
-  if(index < 9){
-    if (!loader.resources[window.chars_json.organizations[result[0].organization].icon_name]) {
-      loader
-        //.add(window.chars_json.organizations[result[index].organization].icon_name, `https://evanchen486.gitee.io/gacha-simulator/asstes/img/organizations/${window.chars_json.organizations[result[index].organization].icon_name}.png`)
-        .add(window.chars_json.organizations[result[index].organization].icon_name, `./asstes/img/organizations/${window.chars_json.organizations[result[index].organization].icon_name}.png`)
-        .load(loadTenOrganization(next_index));
-    }else{
-      loadTenOrganization(next_index)
-    }
-  }
-  if(index == 9){
-    if (!loader.resources[window.chars_json.organizations[result[0].organization].icon_name]) {
-      loader
-        //.add(window.chars_json.organizations[result[index].organization].icon_name, `https://evanchen486.gitee.io/gacha-simulator/asstes/img/organizations/${window.chars_json.organizations[result[index].organization].icon_name}.png`)
-        .add(window.chars_json.organizations[result[index].organization].icon_name, `./asstes/img/organizations/${window.chars_json.organizations[result[index].organization].icon_name}.png`)
-        .load(showGachaResult);
-    }else{
-      showGachaResult()
-    }
-  }
-}
-*/
+
+// 全部资源加载完成后，显示干员干员寻访展示页
 async function showGachaResult() {
   let result = window.last_gacha_result
   app.stage.children = []
@@ -464,7 +433,7 @@ async function showGachaResult() {
   for (index in single_ui_data.preload) {
     addSpriteWithAni(single_ui_data.preload, index, 'UI_single')
   }
-  mg.alpha = 0
+  mg.alpha = 0 // 预加载背景，显隐藏备用（叠放次序的原因）
   for (index in single_ui_data.effect1) {
     addSpriteWithAni(single_ui_data.effect1, index, 'UI_single')
   }
@@ -475,6 +444,7 @@ async function showGachaResult() {
     eval(`${index}.blendMode = PIXI.BLEND_MODES.HARD_LIGHT;`)
   }
 
+  // 显示星星前的喷射粒子效果
   starContainer = new PIXI.ParticleContainer(1500, { alpha: true, scale: true, rotation: true, uvs: true });
   app.stage.addChild(starContainer);
 
@@ -484,6 +454,7 @@ async function showGachaResult() {
     d.create(grid_w * _position[i].x, grid_h * _position[i].y, () => new Sprite(UI_single["s_2.png"]), starContainer, 12, 0, false, 0, 6.28, 30, 40, 3, 8, 0.01, 0.05, 0.02, 0.08);
   }
 
+  // 顺次显示粒子效果及星星
   let one_star_time = 70
   console.log(show_process)
   let num = result[show_process].stars
@@ -506,6 +477,7 @@ async function showGachaResult() {
     }
   }
 
+  // 等待星星显示完毕后执行后续动画
   c.wait(1500).then(() => {
     addSpriteWithAni(single_ui_data.mask, `mask_r_1`, 'UI_single')
     mask_r_1.anchor.set(0.5, 0.5)
@@ -515,6 +487,7 @@ async function showGachaResult() {
     mask_r_1.zIndex = 999
     c.wait(800).then(() => {
       c.fadeOut(mask_r_1, 60 * 0.4)
+      // 故障闪烁效果 - 待完成
       /*
       c.wait(200).then(() => {
         addSpriteWithAni(single_ui_data.mask, `shanshuo_1`, 'UI_single')
@@ -523,6 +496,7 @@ async function showGachaResult() {
         })
       })*/
 
+      // 隐藏干员剪影，显示背景
       char_any.alpha = 0
       mg.alpha = 1
 
@@ -540,6 +514,7 @@ async function showGachaResult() {
           c.slide(${name}, grid_w * (56 + 10) - ${name}.width / 2, grid_h * 70 - ${name}.height / 2, 60 * 30, 'linear');`;
       window.eval(_add)
 
+      // 根据星数，重新设置星星位置
       for (var i = 1; i < num + 1; i++) {
         let _position = single_ui_data.stars_2
         eval(`if(star0${i}){
@@ -594,6 +569,7 @@ async function showGachaResult() {
       c.slide(name_zh, grid_w * (48 + 20), grid_h * 81, 60 * 30, 'linear');
       c.slide(name_en, grid_w * (48.5 + 20), grid_h * 88, 60 * 30, 'linear');
 
+      // 顶层离子效果加载
       if (single_ui_data.effect3) {
         for (index in single_ui_data.effect3) {
           addSpriteWithAni(single_ui_data.effect3, index, 'UI_single')
@@ -601,6 +577,7 @@ async function showGachaResult() {
         }
       }
 
+      // 单抽直接返回寻访页，十连在十个干员全部展示完毕后再返回下一步
       c.wait(800).then(() => {
         if (result.length == 1) {
           app.stage.on('pointertap', function () {
@@ -615,6 +592,7 @@ async function showGachaResult() {
               show_process++
               app.stage.children = []
               app.stage._events = {}
+              // 显示下一个干员（从加载资源开始）
               loadCharRes()
             })
           }
