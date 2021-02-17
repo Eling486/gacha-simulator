@@ -5,6 +5,10 @@
             "url": "asstes/img/ui/basic.json"
         },
         {
+            "name": "folders_ui",
+            "url": "asstes/img/ui/folders.json"
+        },
+        {
             "name": "single_ui",
             "url": "asstes/img/ui/single.json"
         },

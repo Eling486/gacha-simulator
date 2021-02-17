@@ -392,6 +392,20 @@ class Charm {
     ]);
   }
 
+  //`alpha`
+  alpha(sprite, endAlpha, frames = 60, type = "sine") {
+    return this.tweenProperty(
+      sprite, "alpha", sprite.alpha, endAlpha, frames, type
+    );
+  }
+
+  //`rotate`
+  rotate(sprite, endRotation, frames = 60, type = "smoothstep") {
+    return this.tweenProperty(
+      sprite, "rotation", sprite.rotation, endRotation, frames, type
+    );
+  }
+
   strobe(
     sprite, scaleFactor = 1.3, startMagnitude = 10, endMagnitude = 20,
     frames = 10, yoyo = true, delayBeforeRepeat = 0

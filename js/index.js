@@ -383,18 +383,123 @@ function gachaConfirm(type) {
     gacha_result.push(char_obj)
     result = gacha_result
     */
-   console.log(result)
-    loadCharRes()
+    console.log(result)
+    showFolder()
   }
   if (type == 'tentimes') {
     result = gachaTenTimes()
     show_process = 0
-    loadCharRes()
+    showFolder()
+  }
+}
+
+function showFolder() {
+  let result = window.last_gacha_result
+  UI_folders = loader.resources['folders_ui'].textures;
+  app.stage.children = []
+  addSprite(basic_pool_ui_data.preload, 'basic_bg', 'UI_pool_basic', 'app.stage')
+  let folder_bg = new Sprite(UI_folders["folder_bg.png"]);
+  app.stage.addChild(folder_bg);
+  folder_bg.scale.set(0.7, 0.7);
+  folder_bg.position.set(0, 0);
+  folder_bg.anchor.set(0, 0);
+  let folder = new Sprite(UI_folders["folder.png"]);
+  app.stage.addChild(folder);
+  folder.scale.set(0.75, 0.75);
+  folder.position.set(grid_w * 64 - folder.width / 2, grid_h * 82 - folder.height / 2);
+  folder.anchor.set(0.5, 0.5);
+  folder.zIndex = 100
+  folder.rotation = -0.3
+  let folder_breathe = c.breathe(
+    folder, // 精灵
+    0.76,   // x轴缩放的比例
+    0.76,   // y轴缩放的比例
+    60,     // 持续时间，以帧为单位
+    true,   // 轮流反向播放 
+    -60,    // yoyo之间的延迟时间
+  );
+  folder.interactive = true;
+  folder.buttonMode = true
+  folder.on('pointertap', function () {
+    folder_breathe.pause()
+    showPapers()
+  })
+
+  function showPapers() {
+    folder._events = {}
+    c.fadeOut(folder_bg, 30)
+    c.scale(folder, 0.85, 0.85, 30)
+    c.slide(folder, folder.x - 100, folder.y, 30, 'smoothstep')
+    c.rotate(folder, 0, 30)
+    c.wait(550).then(() => {
+      for (var i = 0; i < result.length; i++) {
+        let _add = `paper_${i} = new Sprite(UI_folders["paper_${result[i].stars}.png"]);
+                    app.stage.addChild(paper_${i});
+                    paper_${i}.scale.set(0.82, 0.82);
+                    paper_${i}.position.set(folder.x - 10, folder.y);
+                    paper_${i}.anchor.set(0.5, 0.5);
+                    paper_${i}.zIndex = ${50 - i}`
+        eval(_add)
+      }
+    })
+    c.wait(1000).then(() => {
+      c.scale(folder, 0.85, 0.85, 10)
+      c.slide(folder, folder.x - 30, folder.y + 10, 20, 'smoothstep')
+      c.rotate(folder, -0.1, 20)
+      c.wait(200).then(() => {
+        c.slide(paper_0, paper_0.x + 70, paper_0.y + 10, 15, 'smoothstep')
+        c.rotate(paper_0, 0.05, 10)
+        if (typeof paper_1 == 'object') {
+          c.slide(paper_1, paper_1.x + 110, paper_1.y + 10, 15, 'smoothstep')
+          c.rotate(paper_1, -0.03, 10)
+
+          c.slide(paper_2, paper_2.x + 150, paper_2.y + 10, 15, 'smoothstep')
+          c.rotate(paper_2, -0.01, 10)
+
+          c.slide(paper_3, paper_3.x + 175, paper_3.y + 10, 15, 'smoothstep')
+          c.rotate(paper_3, 0.05, 10)
+
+          c.slide(paper_4, paper_4.x + 215, paper_4.y + 5, 15, 'smoothstep')
+          c.rotate(paper_4, -0.08, 10)
+
+          c.slide(paper_5, paper_5.x + 255, paper_5.y + 5, 15, 'smoothstep')
+          c.rotate(paper_5, 0.05, 10)
+
+          c.slide(paper_6, paper_6.x + 284, paper_6.y + 4, 15, 'smoothstep')
+          c.rotate(paper_6, 0.05, 10)
+
+          c.slide(paper_7, paper_7.x + 310, paper_7.y + 5, 15, 'smoothstep')
+          c.rotate(paper_7, 0.07, 10)
+
+          c.slide(paper_8, paper_8.x + 340, paper_8.y + 5, 15, 'smoothstep')
+          c.rotate(paper_8, 0.2, 10)
+
+          c.slide(paper_9, paper_9.x + 390, paper_9.y + 5, 15, 'smoothstep')
+          c.rotate(paper_9, 0.05, 10)
+        }
+        
+        c.wait(500).then(() => {
+          c.slide(folder, folder.x - 700, folder.y, 20, 'smoothstep')
+          c.rotate(paper_0, 0, 10)
+        })
+
+        c.wait(700).then(() => {
+          c.slide(paper_0, paper_0.x + 50, paper_0.y + 260, 20, 'smoothstep')
+          c.scale(paper_0, 2.5, 2.5, 30)
+        })
+        c.wait(1400).then(() => {
+          app.stage.children = []
+          c.wait(100).then(() => {
+            loadCharRes()
+          })
+        })
+      })
+    })
   }
 }
 
 // 加载干员立绘
-function loadCharRes(){
+function loadCharRes() {
   let index = show_process
   if (!loader.resources[result[index].id.split('_')[1]]) {
     console.log('need load')
@@ -485,6 +590,7 @@ async function showGachaResult() {
     c.scale(mask_r_1, 10, 10, 60 * 0.8)
     c.fadeIn(mask_r_1, 60 * 0.5)
     mask_r_1.zIndex = 999
+    // 此处存在当动画执行时，切换标签或窗口时会造成动画错乱的bug
     c.wait(800).then(() => {
       c.fadeOut(mask_r_1, 60 * 0.4)
       // 故障闪烁效果 - 待完成
